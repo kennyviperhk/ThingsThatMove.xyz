@@ -26,6 +26,7 @@
     "react-animated-css": "^1.2.1",
     "react-id-swiper": "^4.0.0",
     "react-player": "^2.9.0",
-    "react-text-loop": "^2.3.0"
+    "react-text-loop": "^2.3.0",
+    "three": "^0.129.0"
   }
 }

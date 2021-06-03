@@ -6,15 +6,15 @@ let IBMPlexSansThin = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wg
 
 let IBMPlexSansExtraLight = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&display=swap";
 
-let IBMPlexSansLight = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap";
+let IBMPlexSansLight = "https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFsdA.woff2";
 
 let IBMPlexSansRegular = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap";
 
-let IBMPlexSansMedium = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap";
+let IBMPlexSansMedium = "https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdA.woff2";
 
 let IBMPlexSansSemiBold = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap";
 
-let IBMPlexSansBold = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap";
+let IBMPlexSansBold = "https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdA.woff2";
 
 import ArchivGroteskRegular from "../../fonts/ArchivGroteskTrial-RegularTrial.woff2";
 
@@ -39,18 +39,27 @@ const FontFace = ({ state }) => {
     <Global
       styles={css`
 
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
-
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
-
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
-
         @font-face {
           font-family: "Archiv Grotesk";
           font-style: normal;
           font-weight: 300;
           src: url(${fonts[8]}) format("woff2");
+          font-display: ${fontDisplay};
+        }
+
+        @font-face {
+          font-family: "IBM Plex Sans";
+          font-style: normal;
+          font-weight: 500;
+          src: url(${fonts[5]}) format("woff2");
+          font-display: ${fontDisplay};
+        }
+
+        @font-face {
+          font-family: "IBM Plex Sans";
+          font-style: normal;
+          font-weight: 300;
+          src: url(${fonts[3]}) format("woff2");
           font-display: ${fontDisplay};
         }
 
