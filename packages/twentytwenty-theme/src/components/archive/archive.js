@@ -39,6 +39,26 @@ const Archive = ({ state, actions, showExcerpt, showMedia }) => {
   let isTechPage;
   let isHomePage;
 
+  const firstDesc =  <JobDesc>
+                    <JobDescTitle>
+                      as an Artist
+                    </JobDescTitle>
+                    <JobDescDesc>
+                      Kenny Wong creates both individual and collaborative works. In his individual work, he focuses on his interest in percep- tion and daily experiences, while his collaborative works are open and diverse, which expands his awareness to sur- roundings through art making, as well as artworks that can only be done by collaborative thoughts and knowledge.
+                    </JobDescDesc>
+                  </JobDesc>;
+  const secondDesc = <JobDesc>
+                      <JobDescTitle>
+                        as a Designer and Technologist
+                      </JobDescTitle>
+                      <JobDescDesc>
+                        Wong is both conceptually and technically enriched to collaborate as different roles in various projects. His projects are customized through technological system involve mechatronics, web technologies, computer graphics, animation and interactive elements.
+                      </JobDescDesc>
+                    </JobDesc>;
+
+  const a = <ImgDiv key={"a"}><Img src={firstImageURL} /></ImgDiv>;
+  const b = <ImgDiv key={"b"}><Img src={secondImageURL} /></ImgDiv>;
+
   isArtworkPage = (state.router.link === '/category/works/') ? true : false;
   isDesignPage = (state.router.link === '/category/designs/') ? true : false;
   isTechPage = (state.router.link === '/category/techs/') ? true : false;
@@ -91,25 +111,7 @@ const Archive = ({ state, actions, showExcerpt, showMedia }) => {
       );
     })
   }
-  const firstDesc =  <JobDesc>
-                    <JobDescTitle>
-                      as an Artist
-                    </JobDescTitle>
-                    <JobDescDesc>
-                      Kenny Wong creates both individual and collaborative works. In his individual work, he focuses on his interest in percep- tion and daily experiences, while his collaborative works are open and diverse, which expands his awareness to sur- roundings through art making, as well as artworks that can only be done by collaborative thoughts and knowledge.
-                    </JobDescDesc>
-                  </JobDesc>;
-  const secondDesc = <JobDesc>
-                      <JobDescTitle>
-                        as a Designer and Technologist
-                      </JobDescTitle>
-                      <JobDescDesc>
-                        Wong is both conceptually and technically enriched to collaborate as different roles in various projects. His projects are customized through technological system involve mechatronics, web technologies, computer graphics, animation and interactive elements.
-                      </JobDescDesc>
-                    </JobDesc>;
 
-  const a = <ImgDiv key={"a"}><Img src={firstImageURL} /></ImgDiv>;
-  const b = <ImgDiv key={"b"}><Img src={secondImageURL} /></ImgDiv>;
 
 
     if (isHomePage) {
