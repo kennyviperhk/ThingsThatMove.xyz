@@ -1,6 +1,7 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
-import link from "@frontity/html2react/processors/link";
+import {categoriesWidgetsHome} from './config'
+import { projectsHandler } from "./handlers";
 
 const twentyTwentyTheme = {
   name: "@frontity/twentytwenty-theme",
@@ -9,7 +10,7 @@ const twentyTwentyTheme = {
      *  In Frontity, any package can add React components to the site.
      *  We use roots for that, scoped to the `theme` namespace.
      */
-    theme: Theme,
+    theme: Theme
   },
   state: {
     /**
@@ -21,12 +22,14 @@ const twentyTwentyTheme = {
         gray: {
           base: "#6D6D6D",
           light: "#DCD7CA",
-          lighter: "#F5EFE0",
+          lighter: "#F5EFE0"
         },
-        primary: "#cd2653",
-        headerBg: "#ffffff",
-        footerBg: "#ffffff",
-        bodyBg: "#f5efe0",
+        primary: "#f6f6f6",
+        headerBg: "rgba(0,0,0,0.1)",
+        footerBg: "rgba(0,0,0,0.1)",
+        bodyBg: "#454545",
+        bodyText: "#f0f0f0",
+        link:"#f6f6f6",
       },
       // Whether to show the search button in page header
       showSearchInHeader: true,
@@ -43,25 +46,35 @@ const twentyTwentyTheme = {
         // Whether to show it on archive view
         showOnArchive: true,
         // Whether to show it on post
-        showOnPost: true,
+        showOnPost: true
       },
       // Whether to auto-fetch links on a page. Values can be "no" | "all" | "in-view" | "hover"
-      autoPrefetch: "in-view",
-
+      autoPreFetch: "no",
       /**
        * At the moment, we only include the ascii characters of Inter font.
-       * Values can be "us-ascii" | "latin" | "all".
+       * Values can be "us-ascii" | "latin" | "all"
        */
-      fontSets: "all",
-    },
+      fontSets: "all"
+    }
   },
-
   /**
    * Actions are functions that modify the state or deal with other parts of
    * Frontity like libraries.
    */
   actions: {
     theme: {
+      /*
+      beforeSSR: async ({ state, actions }) => {
+        if (state.router.link === "/") {
+
+          console.log(state.router.link)
+          console.log('getting data from beforeSSR...')
+          await Promise.all(
+            Object.values(categoriesWidgetsHome)
+              .map(category => actions.source.fetch(`/category/${category}/`))
+          )
+        }
+      },*/
       openMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = true;
       },
@@ -74,18 +87,21 @@ const twentyTwentyTheme = {
       closeSearchModal: ({ state }) => {
         state.theme.isSearchModalOpen = false;
       },
-    },
+
+    }
   },
   libraries: {
     html2react: {
       /**
        * Add a processor to `html2react` so it processes the `<img>` tags
-       * and internal link inside the content HTML.
-       * You can add your own processors too.
+       * inside the content HTML. You can add your own processors too
        */
-      processors: [image, link],
+      processors: [image]
     },
-  },
+    source: {
+     handlers: [projectsHandler]
+   }
+  }
 };
 
 export default twentyTwentyTheme;

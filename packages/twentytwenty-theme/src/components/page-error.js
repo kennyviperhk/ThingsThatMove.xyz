@@ -1,4 +1,5 @@
-import { styled, connect } from "frontity";
+import React from "react";
+import { styled } from "frontity";
 import SearchForm from "./search/search-form";
 import SectionContainer from "./styles/section-container";
 
@@ -33,7 +34,7 @@ const ErrorPage = ({ state }) => {
   );
 };
 
-export default connect(ErrorPage);
+export default ErrorPage;
 
 export const EntryTitle = styled.h1`
   margin: 0;

@@ -59,6 +59,7 @@ const Archive = ({ state, actions, showExcerpt, showMedia }) => {
   const a = <ImgDiv key={"a"}><Img src={firstImageURL} /></ImgDiv>;
   const b = <ImgDiv key={"b"}><Img src={secondImageURL} /></ImgDiv>;
 
+
   isArtworkPage = (state.router.link === '/category/works/') ? true : false;
   isDesignPage = (state.router.link === '/category/designs/') ? true : false;
   isTechPage = (state.router.link === '/category/techs/') ? true : false;
@@ -111,7 +112,6 @@ const Archive = ({ state, actions, showExcerpt, showMedia }) => {
       );
     })
   }
-
 
 
     if (isHomePage) {
