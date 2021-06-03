@@ -1,0 +1,17 @@
+.slide-show-simple-div {
+text-align: center;
+position: relative;
+width: 100vw;
+height: 100vh;
+}
+
+.slide-show-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+}
