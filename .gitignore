@@ -56,3 +56,7 @@ macOS .DS_Store files
 
 # Frontity
 build
+
+# package
+package.json
+package-lock.json
