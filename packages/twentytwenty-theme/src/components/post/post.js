@@ -30,7 +30,7 @@ import BigVerticalGallery from '../big-vertical-gallery'
 import TwoColumnGallery from '../two-column-gallery'
 import Acknowledgment from "../acknowledgment"
 import TechInfo from "../tech-info"
-//import ModelViewer from"../model-viewer"
+import ModelViewer from "../model-viewer"
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -120,7 +120,7 @@ const Post = ({ state, actions, libraries }) => {
 
       {post.is_exhibition_record === "1" ? "" : ""} {/*TODO*/}
       {post.is_related_post === "1" ? "" : ""} {/*TODO*/}
-      //{post.is_3d_model === "1" ? <ModelViewer data={post.model_viewer} /> : ""}
+      {post.is_3d_model === "1" ? <ModelViewer data={post.model_viewer} /> : ""}
       <ShowAllPosts />
       {/*
        * If the want to show featured media in the
