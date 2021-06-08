@@ -17,10 +17,9 @@
     "url": "https://community.frontity.org"
   },
   "dependencies": {
-    "@frontity/components": "^1.3.0",
-    "@frontity/html2react": "^1.3.0",
-    "frontity": "^1.5.2",
-    "react-split-pane": "^0.1.89",
+    "@frontity/components": "^1.7.2",
+    "@frontity/html2react": "^1.7.0",
+    "frontity": "^1.16.0",
     "react-spring": "8.0.27"
   }
 }
