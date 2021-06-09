@@ -19,6 +19,14 @@ const LoadModel = ({ data }) => {
       });
   }
 
+  gltf.scene.traverse(child => {
+        if (child.isMesh) {
+            child.castShadow = true
+            child.receiveShadow = true
+            child.material.side = THREE.FrontSide
+        }
+    })
+
   useFrame((state, delta) => {
       mixer?.update(delta)
   })
