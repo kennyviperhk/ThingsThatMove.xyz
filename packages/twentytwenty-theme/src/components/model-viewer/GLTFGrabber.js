@@ -1,22 +1,24 @@
 import { connect, styled } from 'frontity'
 import React, { useState, useRef, Suspense } from 'react'
-import { Canvas, useFrame,  render, events  } from '@react-three/fiber'
+import { Canvas, useFrame,  render, events, useLoader  } from '@react-three/fiber'
 import { ContactShadows, Environment, useFBX, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const LoadModel = ({ data }) => {
-  let props
-  const group = useRef()
+  //let props
+  //const group = useRef()
   console.log("loading  " +data.guid)
-  const { nodes, materials, animations } = useGLTF(data.guid)
-
+  //const { nodes, materials, animations } = useGLTF(data.guid)
+  const gltf = useLoader(GLTFLoader, data.guid);
   return (
-    <group ref={group} {...props} dispose={null}>
-      <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01} position={[0, 0, 0]}>
-        <primitive object={nodes.mixamorigHips} />
-        <skinnedMesh geometry={nodes.Alpha_Joints.geometry} material={materials.Alpha_Joints_MAT} skeleton={nodes.Alpha_Joints.skeleton} />
-        <skinnedMesh geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
-      </group>
-    </group>
+    // <group ref={group} {...props} dispose={null}>
+    //   <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01} position={[0, 0, 0]}>
+    //     <primitive object={nodes.mixamorigHips} />
+    //     <skinnedMesh geometry={nodes.Alpha_Joints.geometry} material={materials.Alpha_Joints_MAT} skeleton={nodes.Alpha_Joints.skeleton} />
+    //     <skinnedMesh geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
+    //   </group>
+    // </group>
+    <primitive object={gltf.scene} scale={0.05} />
   )
 }
 const GLTFGrabber = ({ data }) => {
