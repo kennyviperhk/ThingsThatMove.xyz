@@ -1,81 +1,57 @@
-import { connect, styled } from "frontity";
+import { connect, styled } from 'frontity'
 import React, { useState, useRef, Suspense } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
-//import { ReactComponent as Logo } from './model.glb';
-/*
-let props
-const group = useRef()
-console.log(data.guid)
-//const { nodes, materials, animations } = useGLTF(data.guid)
-//const { actions } = useAnimations(animations, group)
-return (
-  <Canvas>
-
-    <ambientLight intensity={0.5} />
-    <Suspense fallback={null}>
-  <group ref={group} {...props} dispose={null}>
-    <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={[0.025, 0.025, 0.025]} position={[0, -2, 0]}>
-      <primitive object={nodes.mixamorigHips} />
-      <skinnedMesh geometry={nodes.Alpha_Joints.geometry} material={materials.Alpha_Joints_MAT} skeleton={nodes.Alpha_Joints.skeleton} />
-      <skinnedMesh geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
-    </group>
-  </group>
-  </Suspense>
-  <OrbitControls enablePan={false} enableZoom={false} />
-
-</Canvas>
-);
-
-*/
+import { Canvas, useFrame,  render, events  } from '@react-three/fiber'
+import { ContactShadows, Environment, useFBX, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 
 const LoadModel = ({ data }) => {
   let props
-  // const group = useRef()
-  // console.log(data.guid)
-  // const { nodes, materials, animations } = useGLTF();
-  const mesh = useRef()
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false)
-  const [active, setActive] = useState(false)
-  useFrame(() => {
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-  })
-      return (
-  // <group ref={group} {...props} dispose={null}>
-  //   <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={[0.025, 0.025, 0.025]} position={[0, -2, 0]}>
-  //     <primitive object={nodes.mixamorigHips} />
-  //     <skinnedMesh geometry={nodes.Alpha_Joints.geometry} material={materials.Alpha_Joints_MAT} skeleton={nodes.Alpha_Joints.skeleton} />
-  //     <skinnedMesh geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
-  //   </group>
-  // </group>
-  <mesh
-    {...props}
-    ref={mesh}
-    scale={active ? 1.5 : 1}
-    onClick={(e) => setActive(!active)}
-    onPointerOver={(e) => setHover(true)}
-    onPointerOut={(e) => setHover(false)}>
-    <boxGeometry args={[1, 1, 1]} />
-    <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-  </mesh>
-)
-};
+  const group = useRef()
+  console.log("loading  " +data.guid)
+  const { nodes, materials, animations } = useGLTF(data.guid)
+
+  return (
+    <group ref={group} {...props} dispose={null}>
+      <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01} position={[0, 0, 0]}>
+        <primitive object={nodes.mixamorigHips} />
+        <skinnedMesh geometry={nodes.Alpha_Joints.geometry} material={materials.Alpha_Joints_MAT} skeleton={nodes.Alpha_Joints.skeleton} />
+        <skinnedMesh geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
+      </group>
+    </group>
+  )
+}
 const GLTFGrabber = ({ data }) => {
-
-
   //const { actions } = useAnimations(animations, group)
   return (
     <div>
-    <Canvas>
-    <ambientLight intensity={0.5} />
-    <Suspense fallback={null}>
-      <LoadModel data={data} />
-      </Suspense>
-      <OrbitControls enablePan={false} enableZoom={true} />
-    </Canvas>
-  </div>
-  );
-};
+    <ModelViewerSection>
+    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 5], fov: 50 }}>
+        <ambientLight intensity={0.1} />
+        <spotLight intensity={0.1} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
+        <Suspense fallback={null}>
+          <LoadModel data={data} />
+          <Environment preset="city" />
+          <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
+        </Suspense>
+        <OrbitControls enableZoom={false} enablePan={false} />
+      </Canvas>
+      </ModelViewerSection>
+    </div>
+  )
+}
 
-export default connect(GLTFGrabber);
+const ModelViewerSection = styled.section`
+background: white;
+color: black;
+position: relative;
+margin: 0;
+padding: 0;
+overflow: hidden;
+object-fit: cover;
+outline: none;
+width: 100vw;
+height: 100vh;
+display: full;
+justify-content: center;
+`
+
+export default connect(GLTFGrabber)
