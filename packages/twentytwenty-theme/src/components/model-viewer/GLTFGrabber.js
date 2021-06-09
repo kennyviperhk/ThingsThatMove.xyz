@@ -18,7 +18,7 @@ const LoadModel = ({ data }) => {
     //     <skinnedMesh geometry={nodes.Alpha_Surface.geometry} material={materials.Alpha_Body_MAT} skeleton={nodes.Alpha_Surface.skeleton} />
     //   </group>
     // </group>
-    <primitive object={gltf.scene} scale={0.05} />
+    <primitive object={gltf.scene} scale={0.1} />
   )
 }
 const GLTFGrabber = ({ data }) => {
@@ -34,7 +34,7 @@ const GLTFGrabber = ({ data }) => {
           <Environment preset="city" />
           <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
         </Suspense>
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
       </Canvas>
       </ModelViewerSection>
     </div>
