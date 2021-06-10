@@ -120,7 +120,7 @@ const Post = ({ state, actions, libraries }) => {
 
       {post.is_exhibition_record === "1" ? "" : ""} {/*TODO*/}
       {post.is_related_post === "1" ? "" : ""} {/*TODO*/}
-      {post.is_3d_model === "1" ? <ModelViewer data={post.model_viewer} /> : ""}
+      {post.is_3d_model === "1" ? <ModelViewer data1={post.model_viewer} data2={post.model_height} data3={post.distance_between_the_ground}/> : ""}
       <ShowAllPosts />
       {/*
        * If the want to show featured media in the

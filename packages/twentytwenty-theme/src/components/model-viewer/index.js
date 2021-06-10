@@ -6,10 +6,11 @@ import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import GLTFGrabber from './GLTFGrabber'
 
-const ModelViewer = ({ data }) => {
+const ModelViewer = ({ data1, data2, data3 }) => {
   return (
       <div>
-        <GLTFGrabber data={data} />
+        <GLTFGrabber data1={data1} data2={data2} data3={data3}/>
+
       </div>
   )
 }

@@ -1,58 +1,107 @@
 import { connect, styled } from 'frontity'
-import React, { useState, useRef, Suspense } from 'react'
-import { Canvas, useFrame,  render, events, useLoader  } from '@react-three/fiber'
+import React, { useState, useEffect, useRef, Suspense } from 'react'
+import { Canvas, useFrame,  render, events, useLoader, useRender  } from '@react-three/fiber'
 import { ContactShadows, Environment, useFBX, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-const LoadModel = ({ data }) => {
+let groundPosition
+
+const LoadModel = ({ data1, data2 }) => {
   const ref = useRef()
-  console.log("loading  " +data.guid)
-  const gltf = useLoader(GLTFLoader, data.guid);
+  console.log("loading Project Model " + data1.guid)
+  console.log("Project Model Height" + data2)
+  const model = useLoader(GLTFLoader, data1.guid);
 
-  let mixer
-  if (gltf.animations.length) {
-      mixer = new THREE.AnimationMixer(ref.scene);
-      gltf.animations.forEach(clip => {
-          const action = mixer.clipAction(clip)
-          action.play();
-      });
-  }
+  // Here's the animation part
+      // *************************
+      let mixer
+      if (model.animations.length) {
+          mixer = new THREE.AnimationMixer(model.scene);
+          model.animations.forEach(clip => {
+              const action = mixer.clipAction(clip)
+              action.play();
+          });
+      }
 
-  gltf.scene.traverse(child => {
-        if (child.isMesh) {
-            child.castShadow = true
-            child.receiveShadow = true
-            child.material.side = THREE.FrontSide
-        }
-    })
+      useFrame((state, delta) => {
+          mixer?.update(delta)
+      })
+      // *************************
 
-  useFrame((state, delta) => {
-      mixer?.update(delta)
-  })
-  // useFrame((state) => {
-  //   const t = state.clock.getElapsedTime()
-  //   ref.current.rotation.z = -0.2 - (1 + Math.sin(t / 1.5)) / 20
-  //   ref.current.rotation.x = Math.cos(t / 4) / 8
-  //   ref.current.rotation.y = Math.sin(t / 4) / 8
-  //   ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10
-  // })
+      model.scene.traverse(child => {
+          if (child.isMesh) {
+              child.castShadow = true
+              child.receiveShadow = true
+              child.material.side = THREE.FrontSide
+          }
+      })
+
+
   return (
-    <primitive ref={ref} object={gltf.scene} rotation={[0,-0.3,0]} scale={0.07} />
+    <primitive ref={ref} object={model.scene} rotation={[0,-0.3,0]} scale={data2/200} />
   )
 }
-const GLTFGrabber = ({ data }) => {
-  //const { actions } = useAnimations(animations, group)
+
+const IdleModel = () => {
+  const ref = useRef()
+  console.log("loading Idle Model " + 'https://kennywong.co/wp-content/uploads/2020/07/Standing.glb')
+  const model = useLoader(GLTFLoader, 'https://kennywong.co/wp-content/uploads/2020/07/Standing.glb');
+
+  // Here's the animation part
+      // *************************
+      let mixer
+      if (model.animations.length) {
+          mixer = new THREE.AnimationMixer(model.scene);
+          model.animations.forEach(clip => {
+              const action = mixer.clipAction(clip)
+              action.play();
+          });
+      }
+
+      useFrame((state, delta) => {
+          mixer?.update(delta)
+      })
+      // *************************
+
+      model.scene.traverse(child => {
+          if (child.isMesh) {
+              child.castShadow = true
+              child.receiveShadow = true
+              child.material.side = THREE.FrontSide
+          }
+      })
+
+
+  return (
+    <primitive ref={ref} object={model.scene} rotation={[0,-0.3,0]} scale={0.17} position={[0 , groundPosition ,0]} />
+  )
+}
+
+const MakeGrid = () => {
+  const grid = new THREE.GridHelper( 500, 100, 0x000000, 0xffffff );
+  grid.material.opacity = 0.01;
+	grid.material.depthWrite = false;
+	grid.material.transparent = true;
+  return(
+    <gridHelper args={[5, 50, 0]} position={[0, groundPosition-0.01, 0]} rotation={[0,-0.3,0]} />
+  );
+}
+
+const GLTFGrabber =({ data1, data2, data3 }) => {
+  groundPosition = 0 - (data3/10);
   return (
     <div>
     <ModelViewerSection>
-    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 5], fov: 30 }}>
+    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, groundPosition/2 , data2/3], fov: 30 }}>
         <ambientLight intensity={0.3} />
         <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
         <Suspense fallback={null}>
-          <LoadModel data={data} />
+          <LoadModel data1={data1} data2={data2}/>
+          <IdleModel/>
           <Environment preset="city" />
-          <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={1} width={10} height={10} blur={1.5} far={0.8} />
+          <ContactShadows rotation-x={Math.PI / 2} position={[0, groundPosition, 0]} opacity={1} width={10} height={10} blur={1.2} far={3} />
+          <MakeGrid/>
         </Suspense>
         <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
       </Canvas>
