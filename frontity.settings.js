@@ -38,7 +38,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          api: "https://kennywong.co/wp-json",
+          api: "https://blog.kennywong.co/wp-json",
           params: {
             per_page: 50,
             type: ["post", "page","landings"]
