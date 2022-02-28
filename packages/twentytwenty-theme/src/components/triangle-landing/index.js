@@ -147,7 +147,7 @@ const TriangleLanding = ({ state, actions }) => {
       subMenuActiveTextTech = 'black';
       frontImageOpacity = 1.0;
 
-      mainName = <MyName><Animated animationIn="fadeIn" animationInDuration={5000} animationInDelay={0} animationOut="fadeOut" isVisible={true}><BgH1Span>KENNY</BgH1Span><BgH1Span>WONG</BgH1Span></Animated></MyName>;
+      mainName = <MyName><Animated animationIn="fadeIn" animationInDuration={5000} animationInDelay={0} animationOut="fadeOut" isVisible={true}><BgH1Span>THINGS THAT MOVE</BgH1Span></Animated></MyName>;
 
       /*
         const playerOptions = {

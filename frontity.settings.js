@@ -2,7 +2,7 @@ const settings = {
   "name": "kennywong.co",
   "state": {
     "frontity": {
-      "url": "http://blog.kennywong.co",
+      "url": "http://blog.thingsthatmove.xyz",
       "title": "Kenny Wong Chi Chuen",
       "description": ""
     }
@@ -38,7 +38,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          api: "https://blog.kennywong.co/wp-json",
+          api: "https://blog.thingsthatmove.xyz/wp-json",
           params: {
             per_page: 50,
             type: ["post", "page","landings"]
