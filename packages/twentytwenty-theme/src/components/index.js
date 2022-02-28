@@ -33,6 +33,7 @@ const Theme = ({ state, libraries }) => {
   };
   */
   const data = state.source.get(state.router.link);
+  console.log(data)
   const parse = libraries.source.parse(state.router.link);
   // Check if the url is a search type
   const isSearch = Boolean(parse.query["s"]);
@@ -68,12 +69,13 @@ const Theme = ({ state, libraries }) => {
         on the type of URL we are in. */}
         <Main id="main">
           <Switch>
+
             <Loading when={data.isFetching} />
             <SearchResults when={isSearch} />
             <Home when={data.isHome} />
             <Archive when={data.isArchive} />
-            <Post when={data.isPostType} />
-            <PageError when={data.isError} />
+              <Post when={data.isPostType} />
+            {/*  <PageError when={data.isError} />*/}
           </Switch>
         </Main>
       </div>
