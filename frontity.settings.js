@@ -2,7 +2,7 @@ const settings = {
   "name": "kennywong.co",
   "state": {
     "frontity": {
-      "url": "http://kennywong.co",
+      "url": "http://blog.kennywong.co",
       "title": "Kenny Wong Chi Chuen",
       "description": ""
     }

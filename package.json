@@ -1,5 +1,5 @@
 {
-  "name": "thingsthatmove.xyz",
+  "name": "kennywong.co",
   "version": "1.0.0",
   "private": true,
   "description": "Frontity project",
@@ -25,10 +25,12 @@
     "@react-three/drei": "^6.2.2",
     "@react-three/fiber": "^6.2.3",
     "frontity": "^1.17.2",
+    "npm": "^8.5.2",
     "react-animated-css": "^1.2.1",
     "react-id-swiper": "^4.0.0",
     "react-player": "^2.9.0",
     "react-text-loop": "^2.3.0",
+    "swiper": "^8.0.6",
     "three": "^0.138.0"
   }
 }
