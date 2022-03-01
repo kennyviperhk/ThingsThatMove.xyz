@@ -2,7 +2,7 @@ const settings = {
   "name": "kennywong.co",
   "state": {
     "frontity": {
-      "url": "http://blog.thingsthatmove.xyz",
+      "url": "https://blog.thingsthatmove.xyz",
       "title": "Things That Move Ltd.",
       "description": ""
     }

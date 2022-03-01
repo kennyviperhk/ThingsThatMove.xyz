@@ -22,7 +22,7 @@ import IBMPlexSansSemiBoldItalic from "./fonts/IBM_Plex_Sans/IBMPlexSans-SemiBol
 import IBMPlexSansBold from "./fonts/IBM_Plex_Sans/IBMPlexSans-Bold.woff2";
 import IBMPlexSansBoldItalic from "./fonts/IBM_Plex_Sans/IBMPlexSans-BoldItalic.woff2";
 
-import ArchivGroteskRegular from "https://blog.thingsthatmove.xyz/fonts/ArchivGroteskTrial-RegularTrial.woff2";
+import ArchivGroteskRegular from "https://www.blog.thingsthatmove.xyz/wp-content/uploads/2022/03/ArchivGroteskTrial-RegularTrial.woff2";
 
 
 
