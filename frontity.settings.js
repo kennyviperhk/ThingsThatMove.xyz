@@ -3,7 +3,7 @@ const settings = {
   "state": {
     "frontity": {
       "url": "http://blog.thingsthatmove.xyz",
-      "title": "Kenny Wong Chi Chuen",
+      "title": "Things That Move Ltd.",
       "description": ""
     }
   },

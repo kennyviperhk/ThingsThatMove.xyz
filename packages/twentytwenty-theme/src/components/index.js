@@ -49,10 +49,11 @@ const Theme = ({ state, libraries }) => {
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />
       <Head>
+        <script src="http://localhost:8097"></script>
         <meta name="description" content={state.frontity.description} />
         <meta name="viewport" contentWidth="device-width" initialScale={1.0} maximumScale={1.0} userScalable="no" />
-        <link rel="preconnect" href="https://www.kennywong.co" />
-        <link rel="preconnect" href="https://kennywong.co/" />
+        <link rel="preconnect" href="https://www.blog.thingsthatmove.xyz" />
+        <link rel="preconnect" href="https://blog.thingsthatmove.xyz" />
         <html lang="en" />
       </Head>
 

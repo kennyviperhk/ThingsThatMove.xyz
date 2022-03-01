@@ -16,7 +16,7 @@ let IBMPlexSansSemiBold = "https://fonts.googleapis.com/css2?family=IBM+Plex+San
 
 let IBMPlexSansBold = "https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdA.woff2";
 
-import ArchivGroteskRegular from "../../fonts/ArchivGroteskTrial-RegularTrial.woff2";
+import ArchivGroteskRegular from "./fonts/ArchivGroteskTrial-RegularTrial.woff2";
 
 
 

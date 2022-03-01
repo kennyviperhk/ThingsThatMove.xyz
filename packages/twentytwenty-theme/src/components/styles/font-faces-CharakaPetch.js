@@ -1,13 +1,13 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
 
-import ChakraPetchBold from "../../fonts/Chakra_Petch/ChakraPetch-Bold.woff2";
-import ChakraPetchBoldItalic from "../../fonts/Chakra_Petch/ChakraPetch-BoldItalic.ttf";
-import ChakraPetchItalic from "../../fonts/Chakra_Petch/ChakraPetch-Italic.ttf";
-import ChakraPetchLight from "../../fonts/Chakra_Petch/ChakraPetch-Light.woff2";
-import ChakraPetchLightItalic from "../../fonts/Chakra_Petch/ChakraPetch-LightItalic.ttf";
-import ChakraPetchRegular from "../../fonts/Chakra_Petch/ChakraPetch-Regular.woff2";
-//import ChakraPetchSemiBold from "../../fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf";
+import ChakraPetchBold from "./fonts/Chakra_Petch/ChakraPetch-Bold.woff2";
+import ChakraPetchBoldItalic from "./fonts/Chakra_Petch/ChakraPetch-BoldItalic.ttf";
+import ChakraPetchItalic from "./fonts/Chakra_Petch/ChakraPetch-Italic.ttf";
+import ChakraPetchLight from "./fonts/Chakra_Petch/ChakraPetch-Light.woff2";
+import ChakraPetchLightItalic from "./fonts/Chakra_Petch/ChakraPetch-LightItalic.ttf";
+import ChakraPetchRegular from "./fonts/Chakra_Petch/ChakraPetch-Regular.woff2";
+//import ChakraPetchSemiBold from "./fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf";
 
 const FontFace = ({ state }) => {
   let fonts = null;
