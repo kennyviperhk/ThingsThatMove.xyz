@@ -30,7 +30,7 @@ const Footer = ({ state, actions }) => {
   const { footerBg } = state.theme.colors;
 
 
-  //let uri = "mailto:me@kennywong.co"
+  //let uri = "mailto:me@thingsthatmove.xyz"
   const p = "landings/";
   const extraPostLink = `/${p}`;
   let landingData = state.source.get(extraPostLink);
@@ -62,15 +62,15 @@ const Footer = ({ state, actions }) => {
       <SiteFooterInner>
         <CollaborateDiv>
         <BigTxt>Let's Collaborate</BigTxt>
-        <MailLinkDiv><MailLink><Img src={ArrowSVG} alt="email_me"/><LinkSpan>&#109;&#101;&#064;&#107;&#101;&#110;&#110;&#121;&#119;&#111;&#110;&#103;&#046;&#099;&#111;</LinkSpan></MailLink></MailLinkDiv>
+        <MailLinkDiv><MailLink><Img src={ArrowSVG} alt="email_me"/><LinkSpan>&#109;&#101;&#64;&#116;&#104;&#105;&#110;&#103;&#115;&#116;&#104;&#97;&#116;&#109;&#111;&#118;&#101;&#46;&#120;&#121;&#122;</LinkSpan></MailLink></MailLinkDiv>
         </CollaborateDiv>
     </SiteFooterInner>
       <SubMenu>
-        <SubMenuTitleDiv ><TitleLink target="_blank" link="https://www.facebook.com/kennywong.co" onClick={e => changePage(e)}>Facebook</TitleLink></SubMenuTitleDiv>
+        <SubMenuTitleDiv ><TitleLink target="_blank" link="https://www.facebook.com/thingsthatmove.xyz/" onClick={e => changePage(e)}>Facebook</TitleLink></SubMenuTitleDiv>
         <TitleDivHr><HrLine></HrLine></TitleDivHr>
-        <SubMenuTitleDiv ><TitleLink target="_blank" link="https://www.instagram.com/kennywrongwong/" onClick={e => changePage(e)}>Instagram</TitleLink></SubMenuTitleDiv>
+        <SubMenuTitleDiv ><TitleLink target="_blank" link="https://www.instagram.com/thingsthatmove.xyz/" onClick={e => changePage(e)}>Instagram</TitleLink></SubMenuTitleDiv>
         <TitleDivHr><HrLine></HrLine></TitleDivHr>
-        <SubMenuTitleDiv ><TitleLink target="_blank" link="https://vimeo.com/kennywong" onClick={e => changePage(e)}>Vimeo</TitleLink></SubMenuTitleDiv>
+        <SubMenuTitleDiv ><TitleLink target="_blank" link="https://vimeo.com/thingsthatmove" onClick={e => changePage(e)}>Vimeo</TitleLink></SubMenuTitleDiv>
       </SubMenu>
       <BgImg src={item.foreground_media[0].guid} />
     </SiteFooter>

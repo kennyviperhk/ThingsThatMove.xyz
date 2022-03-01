@@ -56,8 +56,8 @@ const Header = ({ state, actions }) => {
     <PageHeader bg={headerBg} id="site-header">
       <SiteTitle>
         <SiteTitleDiv><TitleLink link={bioLink}>About</TitleLink>{currentLink === bioLink ? <Arrow src={ArrowSVG} css={css`width:80px;`} alt="About Kenny Wong" />: ""}</SiteTitleDiv>
-        <SiteTitleDiv><TitleLink link={homeLink}>{title.charAt(0)}</TitleLink></SiteTitleDiv>
-        <SiteTitleDiv><TitleLink link={worksLink}>Work</TitleLink>{currentLink === worksLink ? <Arrow css={css`width:70px;`} src={ArrowSVG} alt="Works" />: ""}</SiteTitleDiv>
+        <SiteTitleDiv><TitleLink link={homeLink}>TTM</TitleLink></SiteTitleDiv>
+        <SiteTitleDiv><TitleLink link={worksLink}>Projects</TitleLink>{currentLink === worksLink ? <Arrow css={css`width:70px;`} src={ArrowSVG} alt="Works" />: ""}</SiteTitleDiv>
       </SiteTitle>
     </PageHeader>
   );

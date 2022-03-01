@@ -5,9 +5,12 @@ import Link from "../link";
 const ServiceIntro = ({ state, actions }) => {
     return <ServiceIntroSection className="container" >
       <JobTitles>
-        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Kinetic Artist</JobTitleLink></JobTitleH1></JobTitleDiv>
-        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Multimedia Designer</JobTitleLink></JobTitleH1></JobTitleDiv>
-        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Technologist</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">We do</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Kinetic Art</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Interactive Design</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Robotics</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Technical Consultancy</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Creative and Resarch</JobTitleLink></JobTitleH1></JobTitleDiv>
       </JobTitles>
       <JobDesc>
         <JobDescTitle>
@@ -51,7 +54,8 @@ const JobTitleDiv = styled.div`
 
   }
   &:nth-of-type(2){
-    text-align:center;
+    text-align:left;
+    padding-left:30vw;
     @media(orientation: portrait){
       text-align:left;
 
@@ -59,6 +63,26 @@ const JobTitleDiv = styled.div`
   }
   &:nth-of-type(3){
     text-align:right;
+    @media(orientation: portrait){
+      text-align:left;
+    }
+  }
+  &:nth-of-type(4){
+    text-align:left;
+    padding-left:30vw;
+    @media(orientation: portrait){
+      text-align:left;
+    }
+  }
+  &:nth-of-type(5){
+    text-align:right;
+    @media(orientation: portrait){
+      text-align:left;
+    }
+  }
+  &:nth-of-type(6){
+    text-align:left;
+    padding-left:30vw;
     @media(orientation: portrait){
       text-align:left;
     }
