@@ -130,7 +130,6 @@ const TriangleLanding = ({ state, actions }) => {
       subMenuActiveTextDesign = 'black';
       subMenuActiveTextTech = 'black';
       frontImageOpacity = 1.0;
-    //  mainName = <MyBioName><BgH1Span>KENNY</BgH1Span><BgH1Span>WONG</BgH1Span></MyBioName>;
         mainName = <MyName><BgH1Span></BgH1Span><BgH1Span></BgH1Span></MyName>;
     } else if (isHomePage) {
 
@@ -247,7 +246,7 @@ const TriangleLanding = ({ state, actions }) => {
       subMenuActiveTextTech = 'black';
       frontImageOpacity = 1.0;
 
-      mainName = <MyName><BgH1Span>KENNY</BgH1Span><BgH1Span>WONG</BgH1Span></MyName>;
+      mainName = <MyName><BgH1Span>THINGS THAT MOVE</BgH1Span></MyName>;
     }
 
   }
@@ -334,7 +333,7 @@ const MyName = styled.h1`
   align-items: center;
   font-family: "Archiv Grotesk", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
   Helvetica, sans-serif;
-  font-size: 10.5vw;
+  font-size: 7.5vw;
   text-align: center;
   z-index:3;
   letter-spacing: 0.3vw;
