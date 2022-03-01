@@ -33,7 +33,7 @@ const Theme = ({ state, libraries }) => {
   };
   */
   const data = state.source.get(state.router.link);
-  console.log(data)
+  //console.log(data)
   const parse = libraries.source.parse(state.router.link);
   // Check if the url is a search type
   const isSearch = Boolean(parse.query["s"]);

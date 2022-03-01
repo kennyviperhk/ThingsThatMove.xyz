@@ -7,7 +7,8 @@ import Navigation from "./navigation/navigation";
 //import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
 import MobileMenuModal from "./mobile/menu-modal";
-import ArrowSVG from "./styles/arrowDown.svg"
+//import ArrowSVG from "./styles/arrowDown.svg"
+
 const Header = ({ state, actions }) => {
   //class Header extends Component {
   /*
@@ -51,13 +52,13 @@ const Header = ({ state, actions }) => {
   const bioLink = "/bio/"
   const homeLink = "/"
   const worksLink = "/category/works/"
-
+  const arrowLink = state.frontity.url+ "/wp-content/uploads/2022/03/arrowDown.svg"
   return (
     <PageHeader bg={headerBg} id="site-header">
       <SiteTitle>
-        <SiteTitleDiv><TitleLink link={bioLink}>About</TitleLink>{currentLink === bioLink ? <Arrow src={ArrowSVG} css={css`width:80px;`} alt="About Kenny Wong" />: ""}</SiteTitleDiv>
+        <SiteTitleDiv><TitleLink link={bioLink}>About</TitleLink>{currentLink === bioLink ? <Arrow src={arrowLink} css={css`width:80px;`} alt="" />: ""}</SiteTitleDiv>
         <SiteTitleDiv><TitleLink link={homeLink}>TTM</TitleLink></SiteTitleDiv>
-        <SiteTitleDiv><TitleLink link={worksLink}>Projects</TitleLink>{currentLink === worksLink ? <Arrow css={css`width:70px;`} src={ArrowSVG} alt="Works" />: ""}</SiteTitleDiv>
+        <SiteTitleDiv><TitleLink link={worksLink}>Projects</TitleLink>{currentLink === worksLink ? <Arrow css={css`width:70px;`} src={arrowLink} alt="Works" />: ""}</SiteTitleDiv>
       </SiteTitle>
     </PageHeader>
   );

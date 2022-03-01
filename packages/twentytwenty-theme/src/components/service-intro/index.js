@@ -126,6 +126,7 @@ const JobTitles = styled.div`
 
   width: 100%;
   padding: 0px 30px;
+  background:black;
   @media(orientation: portrait){
     position:relative;
       padding: 0px 15px;
@@ -151,7 +152,7 @@ const JobTitleH1 = styled.h1`
 `
 
 const JobTitleLink = styled(Link)`
-  color:black;
+  color:white;
   text-decoration: none;
   & :hover{
     text-decoration: underline;

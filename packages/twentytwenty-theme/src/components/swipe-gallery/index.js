@@ -6,7 +6,7 @@ import Link from "../link";
 
 import Swiper from 'react-id-swiper';
 import externalCss from './swiper-bundle.css';
-import ArrowSVG from "../styles/arrowUp.svg";
+//import ArrowSVG from "../styles/arrowUp.svg";
 import TextLoop from "react-text-loop";
 
 
@@ -73,6 +73,7 @@ const ref = useRef(null);
     spaceBetween: 20
   }
 
+  const arrowLink = state.frontity.url+ "/wp-content/uploads/2022/03/arrowUp.svg"
   return (<SwipeGallerySection className="container" >
     <PhotoDiv>
       <BgH1Div>
@@ -89,7 +90,7 @@ const ref = useRef(null);
       <Swiper {...params} >
         {galleryItems}
       </Swiper>
-      <ArrowBtn onClick={goNext}><ArrowNext src={ArrowSVG} alt="Works" /></ArrowBtn>
+      <ArrowBtn onClick={goNext}><ArrowNext src={arrowLink} alt="Works" /></ArrowBtn>
     </SwiperDiv>
     <Global styles={css(externalCss)} />
   </SwipeGallerySection>

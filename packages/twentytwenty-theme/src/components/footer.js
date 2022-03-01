@@ -3,7 +3,7 @@ import { styled, connect, css } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
 import Loading from "./loading";
-import ArrowSVG from "./styles/arrowUpWhite.svg"
+//import ArrowSVG from "./styles/arrowUpWhite.svg"
 
 // Component that provides scroll to top functionality
 const BackToTop = () => {
@@ -40,6 +40,7 @@ const Footer = ({ state, actions }) => {
 
   let landingURL, item;
   landingURL = "/landings/footer/";
+  const arrowLink = state.frontity.url+ "/wp-content/uploads/2022/03/arrowUpWhite.svg"
   if (landingData.isReady) {
     var items = landingData.items.map(({ type, id, link }, index) => {
       if (link === landingURL) {
@@ -62,7 +63,7 @@ const Footer = ({ state, actions }) => {
       <SiteFooterInner>
         <CollaborateDiv>
         <BigTxt>Let's Collaborate</BigTxt>
-        <MailLinkDiv><MailLink><Img src={ArrowSVG} alt="email_me"/><LinkSpan>&#109;&#101;&#64;&#116;&#104;&#105;&#110;&#103;&#115;&#116;&#104;&#97;&#116;&#109;&#111;&#118;&#101;&#46;&#120;&#121;&#122;</LinkSpan></MailLink></MailLinkDiv>
+        <MailLinkDiv><MailLink><Img src={arrowLink} alt="email_me"/><LinkSpan>&#109;&#101;&#64;&#116;&#104;&#105;&#110;&#103;&#115;&#116;&#104;&#97;&#116;&#109;&#111;&#118;&#101;&#46;&#120;&#121;&#122;</LinkSpan></MailLink></MailLinkDiv>
         </CollaborateDiv>
     </SiteFooterInner>
       <SubMenu>

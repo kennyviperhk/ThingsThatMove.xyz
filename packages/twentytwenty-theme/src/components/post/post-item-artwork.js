@@ -5,7 +5,7 @@ import FeaturedMedia from "./featured-media-home-artwork";
 import PostMeta from "./post-meta";
 //import PostCategories from "./post-categories";
 import PostTags from "./post-tags";
-import ArrowSVG from "../styles/arrowUp.svg"
+//import ArrowSVG from "../styles/arrowUp.svg"
 
 /**
  * Article Component
@@ -43,6 +43,7 @@ const PostItemArtwork = ({
 
   const content = showExcerpt ? item.excerpt : item.content;
   const { Component: Html2React } = libraries.html2react;
+  const arrowLink = state.frontity.url+ "/wp-content/uploads/2022/03/arrowUp.svg"
   let isPostOnLeft = true;
 
   let isArtworkPage;
@@ -93,7 +94,7 @@ if(isHomePage){
             <PostTagsTitle>{tags.map((tagId, i, arr) => (tagId['name'] + (arr.length - 1 === i ? '' : ' / ')))}</PostTagsTitle>
           </SectionDiv>
         </PostHeader>
-        <Arrow src={ArrowSVG} alt="Works" />
+        <Arrow src={arrowLink} alt="Works" />
       </PostLink>
     </Post>
   );

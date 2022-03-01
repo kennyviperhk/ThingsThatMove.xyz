@@ -356,18 +356,6 @@ transition: all 1.0s;
   }
 `
 
-const ThingsThatMove = styled.h1`
-  justify-content: center;
-  align-items: center;
-  font-family: "Archiv Grotesk", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-  Helvetica, sans-serif;
-  font-size: 9.5vw;
-  text-align: center;
-  z-index:3;
-  letter-spacing: 0.01vw;
-  mix-blend-mode: normal;
-`;
-
 const NumbersDeco = styled.span`
   color:#707070;
   width:100%;

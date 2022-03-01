@@ -13,7 +13,7 @@ const BioTextSection = ({ state, actions, libraries, data }) => {
 
   return (<BioTextSec className="container" >
   <MyBioNameDiv>
-  <MyBioName><Animated animationIn="fadeIn" animationInDuration={1500} animationInDelay={0} animationOut="fadeOut" isVisible={true}><BgH1Span>KENNY</BgH1Span><BgH1Span>WONG</BgH1Span></Animated></MyBioName>
+  <MyBioName><Animated animationIn="fadeIn" animationInDuration={1500} animationInDelay={0} animationOut="fadeOut" isVisible={true}><BgH1Span>THINGS</BgH1Span><BgH1Span>THAT</BgH1Span><BgH1Span>MOVE</BgH1Span></Animated></MyBioName>
 </MyBioNameDiv>
 
     <TxtMainDivUp>
@@ -170,7 +170,7 @@ const DescP = styled.p`
 `
 const MyBioNameDiv = styled.div`
   position:absolute;
-  top:30vh;
+  top:10vh;
   right:0;
   overflow:hidden;
   @media(orientation: portrait) {{
