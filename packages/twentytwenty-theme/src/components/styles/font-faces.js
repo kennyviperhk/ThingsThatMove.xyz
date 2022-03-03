@@ -18,9 +18,12 @@ let IBMPlexSansBold = "https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe
 
 import ArchivGroteskRegular from "./fonts/ArchivGroteskTrial-RegularTrial.woff2";
 
+//import ArchivGroteskRegular from "https://www.blog.thingsthatmove.xyz/wp-content/uploads/2022/03/ArchivGroteskTrial-RegularTrial.woff2";
+
 
 
 const FontFace = ({ state }) => {
+
   let fonts = null;
   let fontDisplay = "swap";
   switch (state.theme.fontSets) {
@@ -32,7 +35,7 @@ const FontFace = ({ state }) => {
       fonts = [IBMPlexSansThin, IBMPlexSansExtraLight, IBMPlexSansLight, IBMPlexSansRegular, IBMPlexSansMedium, IBMPlexSansSemiBold, IBMPlexSansBold, ArchivGroteskRegular];
       break;
     default:
-      fonts = [IBMPlexSansThin, IBMPlexSansExtraLight,, IBMPlexSansLight, IBMPlexSansRegular, IBMPlexSansMedium, IBMPlexSansSemiBold, IBMPlexSansBold, ArchivGroteskRegular];
+      fonts = [IBMPlexSansThin, IBMPlexSansExtraLight, IBMPlexSansLight, IBMPlexSansRegular, IBMPlexSansMedium, IBMPlexSansSemiBold, IBMPlexSansBold, ArchivGroteskRegular];
   }
 
   return (
@@ -43,7 +46,7 @@ const FontFace = ({ state }) => {
           font-family: "Archiv Grotesk";
           font-style: normal;
           font-weight: 300;
-          src: url(${fonts[8]}) format("woff2");
+          src: url(${fonts[7]}) format("woff2");
           font-display: ${fontDisplay};
         }
 
