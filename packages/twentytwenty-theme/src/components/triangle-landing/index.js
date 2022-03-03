@@ -33,9 +33,9 @@ const subMenuFontSize = '20px';
 const TriangleLanding = ({ state, actions }) => {
 
   let isBioPage;
-  let isArtworkPage;
-  let isDesignPage;
-  let isTechPage;
+  let isKineticsRoboticsPage;
+  let isInteractiveDigitalPage;
+  let isTechResearchPage;
   let isHomePage;
   let isPost;
   let landingData;
@@ -55,9 +55,9 @@ const TriangleLanding = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
 
   isBioPage = (state.router.link === '/bio/') ? true : false;
-  isArtworkPage = (state.router.link === '/category/works/') ? true : false;
-  isDesignPage = (state.router.link === '/category/designs/') ? true : false;
-  isTechPage = (state.router.link === '/category/techs/') ? true : false;
+  isKineticsRoboticsPage = (state.router.link === '/category/projects/kinetics-robotics/') ? true : false;
+  isInteractiveDigitalPage = (state.router.link === '/category/projects/interactive-digital/') ? true : false;
+  isTechResearchPage = (state.router.link === '/category/projects/tech-research/') ? true : false;
   isHomePage = (data.isHome) ? true : false;
   isPost = (data.isPost) ? true : false;
 
@@ -86,12 +86,12 @@ const TriangleLanding = ({ state, actions }) => {
     let landingURL, item;
     if (isBioPage) {
       landingURL = "/landings/bio/";
-    } else if (isArtworkPage) {
-      landingURL = "/landings/works/";
-    } else if (isDesignPage) {
-      landingURL = "/landings/designs/";
-    } else if (isTechPage) {
-      landingURL = "/landings/techs/";
+    } else if (isKineticsRoboticsPage) {
+      landingURL = "/landings/kinetics-robotics/";
+    } else if (isInteractiveDigitalPage) {
+      landingURL = "/landings/interactive-digital/";
+    } else if (isTechResearchPage) {
+      landingURL = "/landings/tech-research/";
     } else if (isHomePage) {
       landingURL = "/landings/home/";
     } else if (isPost) { //HOME
@@ -99,7 +99,7 @@ const TriangleLanding = ({ state, actions }) => {
     } else {
       landingURL = "/landings/home/"; //TODO
     }
-
+    //console.log(landingURL)
     var items = landingData.items.map(({ type, id, link }, index) => {
       if (link === landingURL) {
         item = state.source[type][id];
@@ -188,7 +188,7 @@ const TriangleLanding = ({ state, actions }) => {
       frontImageOpacity = 0;
 
       mainName = <MyName><BgH1Span></BgH1Span><BgH1Span></BgH1Span></MyName>;
-    } else if (isArtworkPage) {
+    } else if (isKineticsRoboticsPage) {
 
       foregroundMedia = foregroundVideo;
       backgroundMedia = backgroundWhiteDiv;
@@ -202,9 +202,9 @@ const TriangleLanding = ({ state, actions }) => {
       subMenuActiveTextTech = 'black';
       frontImageOpacity = 1.0;
 
-      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Artist</BgH1Span><BgH1Span></BgH1Span></MyName>;
+      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Physical</BgH1Span><BgH1Span></BgH1Span></MyName>;
 
-    } else if (isDesignPage) {
+    } else if (isInteractiveDigitalPage) {
       foregroundMedia = foregroundVideo;
       backgroundMedia = backgroundWhiteDiv;
       subMenuTop = '10vh';
@@ -217,8 +217,8 @@ const TriangleLanding = ({ state, actions }) => {
       subMenuActiveTextTech = 'black';
       frontImageOpacity = 1.0;
 
-      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Designer</BgH1Span><BgH1Span></BgH1Span></MyName>;
-    } else if (isTechPage) {
+      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Digital</BgH1Span><BgH1Span></BgH1Span></MyName>;
+    } else if (isTechResearchPage) {
       foregroundMedia = foregroundVideo;
       backgroundMedia = backgroundWhiteDiv;
       subMenuTop = '10vh';
@@ -231,7 +231,7 @@ const TriangleLanding = ({ state, actions }) => {
       subMenuActiveTextTech = 'white';
       frontImageOpacity = 1.0;
 
-      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Tech</BgH1Span><BgH1Span></BgH1Span></MyName>;
+      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Art and Technology</BgH1Span><BgH1Span></BgH1Span></MyName>;
     } else {
 
       foregroundMedia = foregroundBlackDiv;
@@ -260,17 +260,17 @@ const TriangleLanding = ({ state, actions }) => {
 
     <PostTitleDiv><PostTitle>{postTitle}</PostTitle><PostTitleChinese>{postTitleChinese}</PostTitleChinese></PostTitleDiv>
 
-    <NumbersDeco css={isHomePage || isTechPage ? css`opacity: 1;`:css`opacity: 0;`}><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span></NumbersDeco>
+    <NumbersDeco css={isHomePage || isTechResearchPage ? css`opacity: 1;`:css`opacity: 0;`}><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span></NumbersDeco>
     <MyNameBottomLine></MyNameBottomLine>
     <DecoCircle></DecoCircle>
     {/*css={css`background: ${subMenuActiveBackground};`}*/}
 
     <SubMenu css={css`top: ${subMenuTop}; opacity: ${subMenuOpacity}`}>
-      <SubMenuTitleDiv css={css`background: ${subMenuActiveBackgroundArtwork};`}><TitleLink css={css`color: ${subMenuActiveTextArtwork};`} link="/category/works/" onClick={e => changePage(e)}>Kinetic Artist</TitleLink></SubMenuTitleDiv>
+      <SubMenuTitleDiv css={css`background: ${subMenuActiveBackgroundArtwork};`}><TitleLink css={css`color: ${subMenuActiveTextArtwork};`} link="/category/projects/kinetics-robotics" onClick={e => changePage(e)}>Kinetics and Robotics</TitleLink></SubMenuTitleDiv>
       <TitleDivHr><HrLine></HrLine></TitleDivHr>
-      <SubMenuTitleDiv css={css`background: ${subMenuActiveBackgroundDesign};`}><TitleLink css={css`color: ${subMenuActiveTextDesign};`} link="/category/designs/" onClick={e => changePage(e)}>Multimedia Designer</TitleLink></SubMenuTitleDiv>
+      <SubMenuTitleDiv css={css`background: ${subMenuActiveBackgroundDesign};`}><TitleLink css={css`color: ${subMenuActiveTextDesign};`} link="/category/projects/interactive-digital" onClick={e => changePage(e)}>Interative and Digital</TitleLink></SubMenuTitleDiv>
       <TitleDivHr><HrLine></HrLine></TitleDivHr>
-      <SubMenuTitleDiv css={css`background: ${subMenuActiveBackgroundTech};`}><TitleLink css={css`color: ${subMenuActiveTextTech};`} link="/category/techs/" onClick={e => changePage(e)}>Technologist</TitleLink></SubMenuTitleDiv>
+      <SubMenuTitleDiv css={css`background: ${subMenuActiveBackgroundTech};`}><TitleLink css={css`color: ${subMenuActiveTextTech};`} link="/category/projects/tech-research" onClick={e => changePage(e)}>Tech and Research</TitleLink></SubMenuTitleDiv>
     </SubMenu>
     <FrontImageDiv css={css`opacity: ${frontImageOpacity};`}>
       <FrontImagePolygonOutDiv>
