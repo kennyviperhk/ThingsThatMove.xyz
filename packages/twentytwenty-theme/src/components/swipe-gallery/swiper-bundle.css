@@ -34,8 +34,9 @@
 }
 .swiper-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
+  /*TODO HARD-CODE*/
+  width:  600px;
+  height: 600px;
   z-index: 1;
   display: flex;
   transition-property: transform;

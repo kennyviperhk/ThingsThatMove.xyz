@@ -49,45 +49,25 @@ const JobTitleDiv = styled.div`
   display: flex;
   height:100%;
 
+
+  &:nth-of-type(2n){
+    text-align:left;
+    padding-left:30vw;
+    @media(orientation: portrait){
+      text-align:right;
+      padding-left:0;
+    }
+  }
+  &:nth-of-type(2n+1){
+    text-align:right;
+    @media(orientation: portrait){
+      text-align:right;
+    }
+  }
+
   &:nth-of-type(1){
     text-align:left;
-
   }
-  &:nth-of-type(2){
-    text-align:left;
-    padding-left:30vw;
-    @media(orientation: portrait){
-      text-align:left;
-
-    }
-  }
-  &:nth-of-type(3){
-    text-align:right;
-    @media(orientation: portrait){
-      text-align:left;
-    }
-  }
-  &:nth-of-type(4){
-    text-align:left;
-    padding-left:30vw;
-    @media(orientation: portrait){
-      text-align:left;
-    }
-  }
-  &:nth-of-type(5){
-    text-align:right;
-    @media(orientation: portrait){
-      text-align:left;
-    }
-  }
-  &:nth-of-type(6){
-    text-align:left;
-    padding-left:30vw;
-    @media(orientation: portrait){
-      text-align:left;
-    }
-  }
-
 `;
 
 const JobDesc = styled.div`
@@ -143,7 +123,7 @@ const JobTitleH1 = styled.h1`
   width: 100%;
   height: auto;
   letter-spacing: 0.3vw;
-  text-transform:none;
+  text-transform: none;
   white-space:nowrap;
   @media(orientation: portrait){
     font-size: ${jobTitleFontSizeMobile};
