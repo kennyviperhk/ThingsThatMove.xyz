@@ -42,9 +42,10 @@ const Theme = ({ state, libraries }) => {
     <>
       {/* Add global styles for the whole site, like body or a's or font-faces.
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
+
       <Global styles={globalStyles(state.theme.colors)} />
       <Global styles={animateCSS} />
-      <FontFaces />
+
 
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />
@@ -62,9 +63,17 @@ const Theme = ({ state, libraries }) => {
       </SkipLink>
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
+        <Switch>
+          <Loading when={data.isFetching} />
+          <Header />
+        </Switch>
         {/* Add the header of the site. */}
-        <Header />
-        <TriangleLanding />
+
+        <Switch>
+          <Loading when={data.isFetching} />
+          <TriangleLanding />
+        </Switch>
+
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
@@ -74,13 +83,14 @@ const Theme = ({ state, libraries }) => {
             <SearchResults when={isSearch} />
             <Home when={data.isHome} />
             <Archive when={data.isArchive} />
-              <Post when={data.isPostType} />
+          <Post when={data.isPostType} />
             {/*  <PageError when={data.isError} />*/}
           </Switch>
         </Main>
       </div>
 
       <Footer />
+      <FontFaces />
     </>
   );
 };
