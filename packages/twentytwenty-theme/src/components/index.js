@@ -55,8 +55,8 @@ const Theme = ({ state, libraries }) => {
         <link rel="preconnect" href="https://www.blog.thingsthatmove.xyz" />
         <link rel="preconnect" href="https://blog.thingsthatmove.xyz" />
         <html lang="en" />
-        <script>{`
-          document.write('<div><SVG id="triangle" width="100px" height="100px" viewBox="-3 -4 39 39"><Polygon fill="#fff" stroke="#333333" stroke-width="1" points="16,0 32,32 0,32"></Polygon></SVG></div>');
+        <script>{`/*
+          //document.write('<div style="margin: 0 auto; height:45vh; z-index:-1"><SVG id="triangle" width="100%" height="100px" viewBox="-3 -4 39 39"><Polygon fill="#fff" stroke="#333333" stroke-width="1" points="16,0 32,32 0,32"></Polygon></SVG></div>');
           var tid = setInterval( function () {
               if ( document.readyState !== 'complete' ) {
                 console.log("not ready")
@@ -66,7 +66,7 @@ const Theme = ({ state, libraries }) => {
               console.log(" ready")
               document.getElementById("triangle").style.visibility = "hidden";
           }, 100 );
-          `}</script>
+          */`}</script>
       </Head>
 
       {/* Accessibility: Provides ability to skip to main content */}
@@ -86,7 +86,7 @@ const Theme = ({ state, libraries }) => {
             <SearchResults when={isSearch} />
             <Home when={data.isHome} />
             <Archive when={data.isArchive} />
-          <Post when={data.isPostType} />
+            <Post when={data.isPostType} />
             {/*  <PageError when={data.isError} />*/}
           </Switch>
         </Main>
