@@ -9,7 +9,7 @@ import {
   PostInner,
   PostTitle,
   SectionContainer
-} from "./post-item";
+} from "./post-item-loaded";
 import PostCategories from "./post-categories";
 import PostMeta from "./post-meta";
 import PostTags from "./post-tags";
