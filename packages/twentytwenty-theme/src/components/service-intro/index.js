@@ -57,8 +57,8 @@ const JobTitleDiv = styled.div`
     text-align:left;
     padding-left:30vw;
     @media(orientation: portrait){
-      text-align:left;
-
+      text-align:right;
+      padding-left:none;
     }
   }
   &:nth-of-type(3){
@@ -71,7 +71,8 @@ const JobTitleDiv = styled.div`
     text-align:left;
     padding-left:30vw;
     @media(orientation: portrait){
-      text-align:left;
+      text-align:right;
+      padding-left:none;
     }
   }
   &:nth-of-type(5){
@@ -84,7 +85,8 @@ const JobTitleDiv = styled.div`
     text-align:left;
     padding-left:30vw;
     @media(orientation: portrait){
-      text-align:left;
+      text-align:right;
+      padding-left:none;
     }
   }
 
