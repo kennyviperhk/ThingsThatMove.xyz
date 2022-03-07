@@ -55,6 +55,18 @@ const Theme = ({ state, libraries }) => {
         <link rel="preconnect" href="https://www.blog.thingsthatmove.xyz" />
         <link rel="preconnect" href="https://blog.thingsthatmove.xyz" />
         <html lang="en" />
+        <script>{`
+          var tid = setInterval( function () {
+              if ( document.readyState !== 'complete' ) {
+                console.log("not ready")
+                return;
+
+              }
+              clearInterval( tid );
+              // do your work
+              console.log(" ready")
+          }, 100 );
+          `}</script>
       </Head>
 
       {/* Accessibility: Provides ability to skip to main content */}
@@ -63,22 +75,13 @@ const Theme = ({ state, libraries }) => {
       </SkipLink>
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
-        <Switch>
-          <Loading when={data.isFetching} />
           <Header />
-        </Switch>
         {/* Add the header of the site. */}
-
-        <Switch>
-          <Loading when={data.isFetching} />
           <TriangleLanding />
-        </Switch>
-
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
           <Switch>
-
             <Loading when={data.isFetching} />
             <SearchResults when={isSearch} />
             <Home when={data.isHome} />
