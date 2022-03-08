@@ -39,7 +39,7 @@ const LoadModel = ({ data1, data2 }) => {
 
 
   return (
-    <primitive ref={ref} object={model.scene} rotation={[0,-0.3,0]} scale={data2/200} />
+    <primitive ref={ref} object={model.scene} rotation={[0,-0.3,0]} scale={data2/30} />
   )
 }
 
