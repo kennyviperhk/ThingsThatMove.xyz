@@ -1,6 +1,7 @@
 import { connect, Global, Head, styled } from "frontity";
 import Switch from "@frontity/components/switch";
-import React,{ lazy } from "react";
+//import React,{ lazy } from "react";
+import React from "react";
 import Footer from "./footer";
 import globalStyles from "./styles/global-styles";
 import FontFaces from "./styles/font-faces";
@@ -42,19 +43,31 @@ const Theme = ({ state, libraries }) => {
     <>
       {/* Add global styles for the whole site, like body or a's or font-faces.
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
+
       <Global styles={globalStyles(state.theme.colors)} />
       <Global styles={animateCSS} />
-      <FontFaces />
+
 
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />
       <Head>
-        <script src="http://localhost:8097"></script>
         <meta name="description" content={state.frontity.description} />
         <meta name="viewport" contentWidth="device-width" initialScale={1.0} maximumScale={1.0} userScalable="no" />
         <link rel="preconnect" href="https://www.blog.thingsthatmove.xyz" />
         <link rel="preconnect" href="https://blog.thingsthatmove.xyz" />
         <html lang="en" />
+        <script>{`/*
+          //document.write('<div style="margin: 0 auto; height:45vh; z-index:-1"><SVG id="triangle" width="100%" height="100px" viewBox="-3 -4 39 39"><Polygon fill="#fff" stroke="#333333" stroke-width="1" points="16,0 32,32 0,32"></Polygon></SVG></div>');
+          var tid = setInterval( function () {
+              if ( document.readyState !== 'complete' ) {
+                console.log("not ready")
+                return;
+              }
+              clearInterval( tid );
+              console.log(" ready")
+              document.getElementById("triangle").style.visibility = "hidden";
+          }, 100 );
+          */`}</script>
       </Head>
 
       {/* Accessibility: Provides ability to skip to main content */}
@@ -63,25 +76,25 @@ const Theme = ({ state, libraries }) => {
       </SkipLink>
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
+          <Header />
         {/* Add the header of the site. */}
-        <Header />
-        <TriangleLanding />
+          <TriangleLanding />
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
           <Switch>
-
             <Loading when={data.isFetching} />
             <SearchResults when={isSearch} />
             <Home when={data.isHome} />
             <Archive when={data.isArchive} />
-              <Post when={data.isPostType} />
+            <Post when={data.isPostType} />
             {/*  <PageError when={data.isError} />*/}
           </Switch>
         </Main>
       </div>
 
       <Footer />
+      <FontFaces />
     </>
   );
 };

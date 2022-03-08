@@ -2,7 +2,7 @@ import React from "react";
 import { styled, connect, keyframes } from "frontity";
 //import Loader from "react-spinners/SkewLoader";
 
-const Loading = ({ state }) => (
+const Loading = ({ }) => (
   <Container>
 <SpinnerItem>
   <Svgg id="triangle" width="100px" height="100px" viewBox="-3 -4 39 39"><Polygon fill="#fff" stroke="#333333" stroke-width="1" points="16,0 32,32 0,32"></Polygon></Svgg>

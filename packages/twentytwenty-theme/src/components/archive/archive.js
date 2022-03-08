@@ -2,7 +2,7 @@ import { connect, styled } from "frontity";
 import React, { Fragment, useEffect } from "react";
 import ArticleArtwork from "../post/post-item-artwork";
 import ArticleStandard from "../post/post-item-standard";
-import ArchiveHeader from "./archive-header";
+//import ArchiveHeader from "./archive-header";
 import Pagination from "./archive-pagination";
 import PostSeparator from "../post/post-separator";
 import Post from "../post";

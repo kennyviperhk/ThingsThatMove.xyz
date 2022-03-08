@@ -1,8 +1,8 @@
 {
-  "name": "kennywong.co",
+  "name": "thingsthatmove.xyz",
   "version": "1.0.0",
   "private": true,
-  "description": "Frontity project",
+  "description": "Creative and Research Studio",
   "keywords": [
     "frontity"
   ],
@@ -11,6 +11,7 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
+    "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
     "build": "frontity build",
     "serve": "frontity serve"

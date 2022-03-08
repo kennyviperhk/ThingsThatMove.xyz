@@ -1,5 +1,5 @@
 const settings = {
-  "name": "kennywong.co",
+  "name": "thingsthatmove.xyz",
   "state": {
     "frontity": {
       "url": "https://blog.thingsthatmove.xyz",

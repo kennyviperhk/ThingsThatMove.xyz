@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect, styled, css } from "frontity";
 import Link from "./link";
-import Navigation from "./navigation/navigation";
+//import Navigation from "./navigation/navigation";
 //import SearchButton from "./search/search-button";
 //import SearchModal from "./search/search-modal";
 //import MobileSearchButton from "./mobile/search-button";
-import MobileMenuButton from "./mobile/menu-button";
-import MobileMenuModal from "./mobile/menu-modal";
+//import MobileMenuButton from "./mobile/menu-button";
+//import MobileMenuModal from "./mobile/menu-modal";
 //import ArrowSVG from "./styles/arrowDown.svg"
 
 const Header = ({ state, actions }) => {
@@ -44,7 +44,7 @@ const Header = ({ state, actions }) => {
     render() {
     {  <PageHeader bg={headerBg} id="site-header" style={this.state.visible ? { top: '0px' } : { top: '0px' }}>}
     */
-  const { title, description } = state.frontity;
+  //const { title, description } = state.frontity;
   const { headerBg } = state.theme.colors;
 
   const currentLink = state.router.link;
