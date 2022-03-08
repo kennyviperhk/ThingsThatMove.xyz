@@ -82,7 +82,7 @@ Frontity also welcomes contributions. There are many ways to support the project
 
 
 
-### Notes for Branch
+### Notes for Working with Branch
 
 need to update from main before start:
 `git checkout b1` (or select branch)
@@ -90,3 +90,19 @@ Then merge:
 `git merge origin/main`
 Then push:
 in GUI
+
+
+
+### Cross Origin Issue
+Are you using Webfonts from Google, Typekit, etc?
+There are multiple ways you could use Webfonts like @font-face or CSS3 methods, some browsers like Firefox & IE may refuse to embed the font when it’s coming from some non-standard 3rd party URL (like your blog) for same security reason.
+
+In order to fix an issue for your WordPress blog, just put below into your .htaccess file.
+`
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+As you see Access-Control-Allow-Origin "*" allows you to access all resources and webfonts from all domains.
+`
