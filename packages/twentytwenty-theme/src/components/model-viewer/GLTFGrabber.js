@@ -43,41 +43,6 @@ const LoadModel = ({ data1, data2 }) => {
   )
 }
 
-const IdleModel = () => {
-  const ref = useRef()
-  console.log("loading Idle Model " + 'https://kennywong.co/wp-content/uploads/2020/07/Standing.glb')
-  const model = useLoader(GLTFLoader, 'https://kennywong.co/wp-content/uploads/2020/07/Standing.glb');
-
-  // Here's the animation part
-      // *************************
-      let mixer
-      if (model.animations.length) {
-          mixer = new THREE.AnimationMixer(model.scene);
-          model.animations.forEach(clip => {
-              const action = mixer.clipAction(clip)
-              action.play();
-          });
-      }
-
-      useFrame((state, delta) => {
-          mixer?.update(delta)
-      })
-      // *************************
-
-      model.scene.traverse(child => {
-          if (child.isMesh) {
-              child.castShadow = true
-              child.receiveShadow = true
-              child.material.side = THREE.FrontSide
-          }
-      })
-
-
-  return (
-    <primitive ref={ref} object={model.scene} rotation={[0,-0.3,0]} scale={0.17} position={[0 , groundPosition ,0]} />
-  )
-}
-
 const MakeGrid = () => {
   const grid = new THREE.GridHelper( 500, 100, 0x000000, 0xffffff );
   grid.material.opacity = 0.01;
@@ -98,7 +63,6 @@ const GLTFGrabber =({ data1, data2, data3 }) => {
         <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
         <Suspense fallback={null}>
           <LoadModel data1={data1} data2={data2}/>
-          <IdleModel/>
           <Environment preset="city" />
           <ContactShadows rotation-x={Math.PI / 2} position={[0, groundPosition, 0]} opacity={1} width={10} height={10} blur={1.2} far={3} />
           <MakeGrid/>
