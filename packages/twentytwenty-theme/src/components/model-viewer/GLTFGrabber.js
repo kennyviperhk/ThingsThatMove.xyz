@@ -4,14 +4,17 @@ import { Canvas, useFrame,  render, events, useLoader, useRender  } from '@react
 import { ContactShadows, Environment, useFBX, useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import Loading from "../loading";
 
 let groundPosition
+let model
+let modelState = 0
 
 const LoadModel = ({ data1, data2 }) => {
   const ref = useRef()
   console.log("loading Project Model " + data1.guid)
   console.log("Project Model Height" + data2)
-  const model = useLoader(GLTFLoader, data1.guid);
+  model = useLoader(GLTFLoader, data1.guid);
 
   // Here's the animation part
       // *************************
@@ -48,13 +51,14 @@ const MakeGrid = () => {
   grid.material.opacity = 0.01;
 	grid.material.depthWrite = false;
 	grid.material.transparent = true;
-  return(
+  return (
     <gridHelper args={[5, 50, 0]} position={[0, groundPosition-0.01, 0]} rotation={[0,-0.3,0]} />
-  );
+  )
 }
 
 const GLTFGrabber =({ data1, data2, data3 }) => {
   groundPosition = 0 - (data3/10);
+  /*TODO ADD LOADING */
   return (
     <div>
     <ModelViewerSection>
