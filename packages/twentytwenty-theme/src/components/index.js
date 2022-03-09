@@ -16,6 +16,8 @@ import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";
 import TriangleLanding from './triangle-landing/'
 import animateCSS from './styles/animate.min.css'
+import ReactGA from 'react-ga';
+
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -25,8 +27,10 @@ const Theme = ({ state, libraries }) => {
   // Get information about the current URL.
   //const API = typeof window !== 'undefined' ? window.API: NodeAlternative;
 
-
-
+  //const TRACKING_ID = "G-KTGYYHMCR0"; // YOUR_OWN_TRACKING_ID
+  //ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize("G-KTGYYHMCR0");
+  ReactGA.pageview(state.router.link);
 /*
   global.requestAnimationFrame = function(callback) {
     console.log("requestAnimationFrame callback")
