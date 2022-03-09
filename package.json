@@ -19,6 +19,7 @@
   "prettier": {},
   "dependencies": {
     "@frontity/core": "^1.15.0",
+    "@frontity/google-analytics": "^2.1.0",
     "@frontity/html2react": "^1.7.0",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/twentytwenty-theme": "./packages/twentytwenty-theme",
@@ -28,8 +29,10 @@
     "frontity": "^1.17.2",
     "npm": "^8.5.2",
     "react-animated-css": "^1.2.1",
+    "react-ga": "^3.3.0",
     "react-id-swiper": "^4.0.0",
     "react-player": "^2.9.0",
+    "react-router-dom": "^6.2.2",
     "react-text-loop": "^2.3.0",
     "swiper": "^8.0.6",
     "three": "^0.138.0"

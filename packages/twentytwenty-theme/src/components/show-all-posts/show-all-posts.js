@@ -7,7 +7,7 @@ const ShowAllPosts = ({ state, actions }) => {
 
     return <ShowAllPostsSection className="container" >
       <BigLinkDiv>
-        <BigLink link="/category/works">Show All Projects</BigLink>
+        <BigLink link="/category/projects">Show All Projects</BigLink>
       </BigLinkDiv>
     </ShowAllPostsSection>;
 
