@@ -27,7 +27,7 @@ const Theme = ({ state, libraries }) => {
   // Get information about the current URL.
   //const API = typeof window !== 'undefined' ? window.API: NodeAlternative;
 
-  //ReactGA.initialize("G-KTGYYHMCR0");
+  //ReactGA.initialize("UA-221885825-2);
   //ReactGA.pageview(state.router.link);
 /*
   global.requestAnimationFrame = function(callback) {
