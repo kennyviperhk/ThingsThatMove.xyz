@@ -34,25 +34,25 @@ const Archive = ({ state, actions, showExcerpt, showMedia }) => {
 
   let firstImageURL;
   let secondImageURL;
-  let isArtworkPage;
-  let isDesignPage;
-  let isTechPage;
+  let isKineticsRoboticsPage;
+  let isInteractiveDigitalPage;
+  let isTechResearchPage;
   let isHomePage;
 
   const firstDesc =  <JobDesc>
                     <JobDescTitle>
-                      as an Artist
+                      as a Creative Technologist
                     </JobDescTitle>
                     <JobDescDesc>
-                      Kenny Wong creates both individual and collaborative works. In his individual work, he focuses on his interest in percep- tion and daily experiences, while his collaborative works are open and diverse, which expands his awareness to sur- roundings through art making, as well as artworks that can only be done by collaborative thoughts and knowledge.
+                      We provide both creative and technical solution service for your projects. With our media art background, we provide creative and technical solutions to tackle your projects.
                     </JobDescDesc>
                   </JobDesc>;
   const secondDesc = <JobDesc>
                       <JobDescTitle>
-                        as a Designer and Technologist
+                        as a Designer and Engineer
                       </JobDescTitle>
                       <JobDescDesc>
-                        Wong is both conceptually and technically enriched to collaborate as different roles in various projects. His projects are customized through technological system involve mechatronics, web technologies, computer graphics, animation and interactive elements.
+                        We also design our own content, aiming to fullfill our curiosity and keep up-to-date to latest trends.
                       </JobDescDesc>
                     </JobDesc>;
 
@@ -60,19 +60,20 @@ const Archive = ({ state, actions, showExcerpt, showMedia }) => {
   const b = <ImgDiv key={"b"}><Img src={secondImageURL} /></ImgDiv>;
 
 
-  isArtworkPage = (state.router.link === '/category/works/') ? true : false;
-  isDesignPage = (state.router.link === '/category/designs/') ? true : false;
-  isTechPage = (state.router.link === '/category/techs/') ? true : false;
+    isKineticsRoboticsPage = (state.router.link === '/category/projects/kinetics-robotics/') ? true : false;
+    isInteractiveDigitalPage = (state.router.link === '/category/projects/interactive-digital/') ? true : false;
+    isTechResearchPage = (state.router.link === '/category/projects/tech-research/') ? true : false;
+
   isHomePage = (data.isHome) ? true : false;
   if (landingData.isReady) {
 
       let landingURL, item;
-      if (isArtworkPage) {
-        landingURL = "/landings/works/";
-      } else if (isDesignPage) {
-        landingURL = "/landings/designs/";
-      } else if (isTechPage) {
-        landingURL = "/landings/techs/";
+      if (isKineticsRoboticsPage) {
+        landingURL = "/landings/kinetics-robotics/";
+      } else if (isInteractiveDigitalPage) {
+        landingURL = "/landings/interactive-digital/";
+      } else if (isTechResearchPage) {
+        landingURL = "/landings/tech-research/";
       } else if (isHomePage) {
         landingURL = "/landings/home/";
       } else {
