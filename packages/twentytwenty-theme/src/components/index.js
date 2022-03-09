@@ -16,7 +16,7 @@ import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";
 import TriangleLanding from './triangle-landing/'
 import animateCSS from './styles/animate.min.css'
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 
 /**
  * Theme is the root React component of our theme. The one we will export
