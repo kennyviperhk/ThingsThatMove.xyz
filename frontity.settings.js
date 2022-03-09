@@ -66,6 +66,14 @@ const settings = {
         },
       },
     },
+    {
+      name: "@frontity/google-tag-manager-analytics",
+      state: {
+        googleTagManagerAnalytics: {
+          containerId: "GTM-PKP53HR",
+        },
+      },
+    },
     "@frontity/tiny-router",
     "@frontity/html2react"
   ]
