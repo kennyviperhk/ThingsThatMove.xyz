@@ -28,18 +28,18 @@ export default connect(ServiceIntro);
 
 const sectionHeight = '60vh';
 const jobTitleFontSize = '6vw';
-const jobTitleFontSizeMobile = '8.5vw';
+const jobTitleFontSizeMobile = '7vw';
 
 const ServiceIntroSection = styled.section`
   min-height: ${sectionHeight};
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   @media(orientation: portrait){
       height: auto;
       min-height: auto;
       max-height: ${sectionHeight};
-      padding-bottom: 50px;
-      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-top: 40px;
   }
 `;
 
@@ -49,44 +49,26 @@ const JobTitleDiv = styled.div`
   display: flex;
   height:100%;
 
-  &:nth-of-type(1){
-    text-align:left;
-
-  }
-  &:nth-of-type(2){
+  &:nth-of-type(2n){
     text-align:left;
     padding-left:30vw;
     @media(orientation: portrait){
-      text-align:left;
+      padding-left:0;
+      text-align:right;
 
     }
   }
-  &:nth-of-type(3){
+  &:nth-of-type(2n+1){
     text-align:right;
     @media(orientation: portrait){
-      text-align:left;
+      text-align:right;
     }
   }
-  &:nth-of-type(4){
-    text-align:left;
-    padding-left:30vw;
-    @media(orientation: portrait){
+
+    &:nth-of-type(1){
       text-align:left;
+
     }
-  }
-  &:nth-of-type(5){
-    text-align:right;
-    @media(orientation: portrait){
-      text-align:left;
-    }
-  }
-  &:nth-of-type(6){
-    text-align:left;
-    padding-left:30vw;
-    @media(orientation: portrait){
-      text-align:left;
-    }
-  }
 
 `;
 
@@ -147,7 +129,7 @@ const JobTitleH1 = styled.h1`
   white-space:nowrap;
   @media(orientation: portrait){
     font-size: ${jobTitleFontSizeMobile};
-    line-height: 0.3em;
+    line-height: 0.4em;
   }
 `
 
