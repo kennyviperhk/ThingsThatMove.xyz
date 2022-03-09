@@ -27,10 +27,8 @@ const Theme = ({ state, libraries }) => {
   // Get information about the current URL.
   //const API = typeof window !== 'undefined' ? window.API: NodeAlternative;
 
-  //const TRACKING_ID = "G-KTGYYHMCR0"; // YOUR_OWN_TRACKING_ID
-  //ReactGA.initialize(TRACKING_ID);
-  ReactGA.initialize("G-KTGYYHMCR0");
-  ReactGA.pageview(state.router.link);
+  //ReactGA.initialize("G-KTGYYHMCR0");
+  //ReactGA.pageview(state.router.link);
 /*
   global.requestAnimationFrame = function(callback) {
     console.log("requestAnimationFrame callback")
