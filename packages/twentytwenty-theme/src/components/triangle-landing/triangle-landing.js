@@ -177,7 +177,7 @@ const TriangleLanding = ({ state, actions }) => {
               </VideoPlayerNative></React.Fragment></BackgroundImageDivDarken>;
         }
 
-      subMenuTop = '-100px';
+    //  subMenuTop = '-100px';
       subMenuOpacity = 0;
       subMenuActiveBackgroundArtwork = 'none';
       subMenuActiveBackgroundDesign = 'none';
