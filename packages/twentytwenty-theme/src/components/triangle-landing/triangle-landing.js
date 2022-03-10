@@ -36,6 +36,7 @@ const TriangleLanding = ({ state, actions }) => {
   let isKineticsRoboticsPage;
   let isInteractiveDigitalPage;
   let isTechResearchPage;
+  let isProjectsPage;
   let isHomePage;
   let isPost;
   let landingData;
@@ -58,6 +59,7 @@ const TriangleLanding = ({ state, actions }) => {
   isKineticsRoboticsPage = (state.router.link === '/category/projects/kinetics-robotics/') ? true : false;
   isInteractiveDigitalPage = (state.router.link === '/category/projects/interactive-digital/') ? true : false;
   isTechResearchPage = (state.router.link === '/category/projects/tech-research/') ? true : false;
+  isProjectsPage = (state.router.link === '/category/projects/') ? true : false;
   isHomePage = (data.isHome) ? true : false;
   isPost = (data.isPost) ? true : false;
 
@@ -92,6 +94,8 @@ const TriangleLanding = ({ state, actions }) => {
       landingURL = "/landings/interactive-digital/";
     } else if (isTechResearchPage) {
       landingURL = "/landings/tech-research/";
+    } else if (isProjectsPage) {
+      landingURL = "/landings/kinetics-robotics/";
     } else if (isHomePage) {
       landingURL = "/landings/home/";
     } else if (isPost) { //HOME
@@ -99,7 +103,7 @@ const TriangleLanding = ({ state, actions }) => {
     } else {
       landingURL = "/landings/home/"; //TODO
     }
-    //console.log(landingURL)
+    console.log(landingURL)
     var items = landingData.items.map(({ type, id, link }, index) => {
       if (link === landingURL) {
         item = state.source[type][id];
@@ -232,7 +236,24 @@ const TriangleLanding = ({ state, actions }) => {
       frontImageOpacity = 1.0;
 
       mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}>Art and Technology</BgH1Span><BgH1Span></BgH1Span></MyName>;
-    } else {
+    } else if (isProjectsPage) {
+
+      foregroundMedia = foregroundVideo;
+      backgroundMedia = backgroundWhiteDiv;
+      subMenuTop = '10vh';
+      subMenuOpacity = 1.0;
+      subMenuActiveBackgroundArtwork = 'none';
+      subMenuActiveBackgroundDesign = 'none';
+      subMenuActiveBackgroundTech = 'none';
+      subMenuActiveTextArtwork = 'black';
+      subMenuActiveTextDesign = 'black';
+      subMenuActiveTextTech = 'black';
+      frontImageOpacity = 1.0;
+
+      mainName = <MyName><BgH1Span css={css`color:Black;text-shadow:${nameTextShadowOn}`}></BgH1Span><BgH1Span></BgH1Span></MyName>;
+
+    }
+    else {
 
       foregroundMedia = foregroundBlackDiv;
       backgroundMedia = backgroundWhiteDiv;
