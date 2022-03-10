@@ -80,8 +80,8 @@ const Post = ({ state, actions, libraries }) => {
     return data.isReady ? (
       <PostArticle>
         <BioTextSection data={post} />
-        <AchievementList data={post} />
-        {/*<PostEntryMedia id={post.gallery} />*/}
+        {/*<AchievementList data={post} />
+        <PostEntryMedia id={post.gallery} />*/}
         <SwipeGallery data={post.gallery} />
       </PostArticle>
     ) : null;
