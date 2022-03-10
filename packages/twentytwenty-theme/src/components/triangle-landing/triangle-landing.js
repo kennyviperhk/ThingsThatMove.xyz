@@ -114,10 +114,10 @@ const TriangleLanding = ({ state, actions }) => {
     const backgroundWhiteDiv = <BackgroundImageDiv><WhiteDiv></WhiteDiv></BackgroundImageDiv>;
 
     const foregroundVideo = item.foreground_media[0] && <React.Fragment key={item.foreground_media[0].guid}><VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true}>
-      <source src={item.foreground_media[0].guid} type={"video/mp4"} key={item.foreground_media[0].guid}/>
+      <source src={item.foreground_media[0].guid+"#t=0.1"} type={"video/mp4"} key={item.foreground_media[0].guid}/>
     </VideoPlayerNative></React.Fragment>;
     const backgroundVideo = item.background_media[0] && <BackgroundImageDiv><React.Fragment key={item.background_media[0].guid}><VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true}>
-      <source src={item.background_media[0].guid} type={"video/mp4"} key={item.background_media[0].guid}/>
+      <source src={item.background_media[0].guid+"#t=0.1"} type={"video/mp4"} key={item.background_media[0].guid}/>
     </VideoPlayerNative></React.Fragment></BackgroundImageDiv>;
 
     if (isBioPage) {
@@ -577,7 +577,7 @@ const SubMenu = styled.div`
 
 const SubMenuTitleDiv = styled.div`
   text-align:center;
-  width:210px;
+  width:250px;
   &:nth-of-type(1){
     text-align:left;
   }
@@ -595,7 +595,7 @@ const SubMenuTitleDiv = styled.div`
       text-align:center;
     }
     &:nth-of-type(3){
-      width:300px;
+      width:270px;
     }
     &:nth-of-type(5){
       text-align:center;

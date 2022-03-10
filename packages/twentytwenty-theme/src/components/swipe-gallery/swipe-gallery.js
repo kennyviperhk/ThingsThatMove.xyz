@@ -42,7 +42,7 @@ const ref = useRef(null);
     } else if ( vids.indexOf(item.guid.split('.').pop()) >= 0 )
     {
         thisItem = <GalleryItem><VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true} >
-          <source src={item.guid} type="video/mp4" />
+          <source src={item.guid+"#t=0.1"} type="video/mp4" />
           </VideoPlayerNative></GalleryItem>;
     }
 
@@ -121,7 +121,7 @@ const PhotoDiv = styled.div`
 const Img = styled.img`
   display:block;
   height:100%;
-  object-fit:cover;
+  object-fit:contain;
   @media(orientation: portrait){
     height:100%;
   }
@@ -199,8 +199,8 @@ const BgH1Span = styled.div`
 `
 const VideoPlayerNative = styled.video`
   display: block;
-  width:100%;
-  height:100%;
+  max-width:100%;
+  max-height:100%;
   object-fit:cover;
   overflow:hidden;
 `;

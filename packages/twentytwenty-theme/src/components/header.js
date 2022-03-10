@@ -58,7 +58,7 @@ const Header = ({ state, actions }) => {
       <SiteTitle>
         <SiteTitleDiv><TitleLink link={bioLink}>About</TitleLink>{currentLink === bioLink ? <Arrow src={arrowLink} css={css`width:80px;`} alt="" />: ""}</SiteTitleDiv>
         <SiteTitleDiv><TitleLink link={homeLink}>TTM</TitleLink></SiteTitleDiv>
-        <SiteTitleDiv><TitleLink link={worksLink}>Projects</TitleLink>{currentLink === worksLink ? <Arrow css={css`width:70px;`} src={arrowLink} alt="Projects" />: ""}</SiteTitleDiv>
+        <SiteTitleDiv><TitleLink link={worksLink}>Projects</TitleLink>{currentLink === worksLink ? <Arrow css={css`width:110px;`} src={arrowLink} alt="Projects" />: ""}</SiteTitleDiv>
       </SiteTitle>
     </PageHeader>
   );
@@ -127,7 +127,7 @@ const SiteTitleDiv = styled.div`
     font-size:40px;
     padding: 10px 45px 0 20px;
     @media(orientation: portrait) {
-      padding: 10px 35px 0 15px;
+      padding: 10px 0px 0 15px;
     }
   }
   &:nth-of-type(3){
