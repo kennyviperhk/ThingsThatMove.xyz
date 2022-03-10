@@ -70,7 +70,7 @@ const documentSetup = colors => css`
     color: ${colors.bodyText};
     font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
       Helvetica, sans-serif;
-    font-size: 1.8rem;
+    /*font-size: 1.8rem;*/
     font-weight: 300;
     letter-spacing: -0.015em;
     text-align: left;
@@ -80,7 +80,6 @@ const documentSetup = colors => css`
   *::before,
   *::after {
     box-sizing: inherit;
-    -webkit-font-smoothing: antialiased;
     word-break: break-word;
     word-wrap: break-word;
   }
@@ -163,7 +162,7 @@ const elementBase = colors => css`
   p {
     line-height: 1.5;
     margin: 0 0 1em 0;
-    font-size: 13px;
+    font-size: 18px;
     font-weight:300;
   }
 
