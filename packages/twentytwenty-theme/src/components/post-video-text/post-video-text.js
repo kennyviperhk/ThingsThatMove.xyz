@@ -17,7 +17,7 @@ const PostVideoText = ({ concept, video, isSecondary }) => {
     } else if ( vids.indexOf(video.split('.').pop()) >= 0 )
     {
         videoPlayer = <VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true} >
-          <source src={video} type="video/mp4" />
+          <source src={video+"#t=0.1"} type="video/mp4" />
           </VideoPlayerNative>;
     }else{
          videoPlayer = video ? <ReactPlayer url={video} width='100%' height='100%' /> :"";

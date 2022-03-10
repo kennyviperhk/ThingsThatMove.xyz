@@ -14,8 +14,8 @@ const FullWidthGallery = ({ state, actions, libraries, data }) => {
         thisItem = <Img src={item.guid} alt={item.post_title} />;
     } else if ( vids.indexOf(item.guid.split('.').pop()) >= 0 )
     {
-        thisItem = <VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true} >
-          <source src={item.guid} type="video/mp4" />
+        thisItem = <VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true}>
+          <source src={item.guid+"#t=0.1"} type="video/mp4" />
           </VideoPlayerNative>;
     }
 
