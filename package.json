@@ -27,6 +27,7 @@
     "@frontity/wp-source": "^1.11.7",
     "@react-three/drei": "^6.2.2",
     "@react-three/fiber": "^6.2.3",
+    "@vercel/analytics": "^1.0.1",
     "frontity": "^1.17.2",
     "npm": "^8.5.2",
     "react-animated-css": "^1.2.1",
