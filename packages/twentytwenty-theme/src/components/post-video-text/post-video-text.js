@@ -13,14 +13,16 @@ const PostVideoText = ({ concept, video, isSecondary }) => {
 
     if( imgs.indexOf(video.split('.').pop()) >= 0 )
     {
-        videoPlayer = <Img src={video} alt={video} />;
+        videoPlayer = <img src={video} alt={video} />;
     } else if ( vids.indexOf(video.split('.').pop()) >= 0 )
     {
         videoPlayer = <VideoPlayerNative playsInline={true} autoPlay={true} muted={true} loop={true} >
           <source src={video+"#t=0.1"} type="video/mp4" />
           </VideoPlayerNative>;
     }else{
-         videoPlayer = video ? <ReactPlayer url={video} width='100%' height='100%' /> :"";
+    
+      
+         videoPlayer = video ? <ReactPlayer url={video} width='100%' height='100%'  controls='true'/> :"";
     }
 
   return (<PostVideoTextSection className="container" css={isSecondary ? css`flex-flow:row-reverse`:css`flex-flow:row`} >

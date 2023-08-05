@@ -11,6 +11,15 @@ This project was bootstrapped with [Frontity](https://frontity.org/).
 
 ### Launch a development server
 
+first install NVM and install node v16.20.1
+```
+nvm install 16
+nvm use 16
+
+npm install --legacy-peer-deps
+
+```
+then it should able to run
 ```
 npx frontity dev
 ```
