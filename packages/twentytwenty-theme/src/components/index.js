@@ -17,6 +17,7 @@ import PageError from "./page-error";
 import TriangleLanding from './triangle-landing/'
 import animateCSS from './styles/animate.min.css'
 //import ReactGA from 'react-ga';
+import { inject } from '@vercel/analytics';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -49,9 +50,9 @@ const Theme = ({ state, libraries }) => {
       <Global styles={globalStyles(state.theme.colors)} />
       <Global styles={animateCSS} />
 
-
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />
+
       <Head>
         <meta name="description" content={state.frontity.description} />
         <meta name="viewport" contentWidth="device-width" initialScale={1.0} maximumScale={1.0} userScalable="no" />
@@ -94,7 +95,7 @@ const Theme = ({ state, libraries }) => {
           </Switch>
         </Main>
       </div>
-
+      {inject()}
       <Footer />
       <FontFaces />
     </>

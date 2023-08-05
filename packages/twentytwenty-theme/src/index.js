@@ -3,6 +3,7 @@ import image from "@frontity/html2react/processors/image";
 import {categoriesWidgetsHome} from './config'
 import { projectsHandler } from "./handlers";
 
+
 const twentyTwentyTheme = {
   name: "@frontity/twentytwenty-theme",
   roots: {
