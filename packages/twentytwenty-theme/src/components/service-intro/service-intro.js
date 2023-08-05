@@ -10,7 +10,7 @@ const ServiceIntro = ({ state, actions }) => {
         <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Interactive Design</JobTitleLink></JobTitleH1></JobTitleDiv>
         <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Robotics</JobTitleLink></JobTitleH1></JobTitleDiv>
         <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Technical Consultancy</JobTitleLink></JobTitleH1></JobTitleDiv>
-        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Creative and Resarch</JobTitleLink></JobTitleH1></JobTitleDiv>
+        <JobTitleDiv><JobTitleH1><JobTitleLink link="/category/works/">Creative and Research</JobTitleLink></JobTitleH1></JobTitleDiv>
       </JobTitles>
       <JobDesc>
         <JobDescTitle>
