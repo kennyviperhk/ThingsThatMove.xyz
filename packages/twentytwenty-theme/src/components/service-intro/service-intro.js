@@ -27,7 +27,7 @@ const ServiceIntro = ({ state, actions }) => {
 export default connect(ServiceIntro);
 
 const sectionHeight = '60vh';
-const jobTitleFontSize = '6vw';
+const jobTitleFontSize = '5.5vw';
 const jobTitleFontSizeMobile = '7vw';
 
 const ServiceIntroSection = styled.section`
@@ -51,7 +51,7 @@ const JobTitleDiv = styled.div`
 
   &:nth-of-type(2n){
     text-align:left;
-    padding-left:30vw;
+    padding-left:12vw;
     @media(orientation: portrait){
       padding-left:0;
       text-align:right;
