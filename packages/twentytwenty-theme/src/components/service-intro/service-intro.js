@@ -27,7 +27,7 @@ const ServiceIntro = ({ state, actions }) => {
 export default connect(ServiceIntro);
 
 const sectionHeight = '60vh';
-const jobTitleFontSize = '5.5vw';
+const jobTitleFontSize = '5vw';
 const jobTitleFontSizeMobile = '7vw';
 
 const ServiceIntroSection = styled.section`
