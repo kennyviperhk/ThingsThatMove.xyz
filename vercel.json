@@ -2,25 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build",
-        "nodeVersion": "18.x",
-        "installCommand": "npm install --legacy-peer-deps",
-        "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider frontity build"
-      }
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/static/$1",
-      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+      "dest": "/static/$1"
     },
     {
-      "src": "/.*",
-      "dest": "/index.html"
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
 }
