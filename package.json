@@ -13,7 +13,8 @@
     "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
     "build": "frontity build",
-    "serve": "frontity serve"
+    "serve": "frontity serve",
+    "vercel-build": "npm install --legacy-peer-deps && frontity build"
   },
   "prettier": {},
   "dependencies": {
@@ -32,7 +33,7 @@
     "react-animated-css": "^1.2.1",
     "react-id-swiper": "^4.0.0",
     "react-player": "^2.12.0",
-    "react-text-loop": "^2.2.0",
+    "react-text-loop": "^2.3.0",
     "swiper": "^8.0.6",
     "three": "^0.138.0"
   }
