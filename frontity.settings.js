@@ -8,7 +8,7 @@ const settings = {
     }
   },
   "bundle": {
-    "splitting": true, // Enable code-splitting
+    "splitting": true, 
   },
   "packages": [
     {
