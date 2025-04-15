@@ -1,76 +1,37 @@
+import React, { useEffect, Suspense } from "react";
 import { connect, styled } from "frontity";
-import React,{useEffect} from "react";
 
-import ServiceIntro from '../service-intro/'
-import HomePosts from '../archive'
-import ShowAllPosts from '../show-all-posts'
-import { useWindowSize } from '../../helpers'
-import Archive from '../archive'
-import Post from '../post'
-//import PhotoText from '../photo-text/'
-//import ThreeScene from './ThreeScene.js';
-//import SplitPane from '../split-pane/'
-//import GetPosts from '../loadPosts'
-const Home = ({ state, actions }) => {
+import ServiceIntro from "../service-intro";
+import HomePosts from "../archive";
+import ShowAllPosts from "../show-all-posts";
+import { useWindowSize } from "../../helpers";
 
+import Archive from "../archive";
+import Post from "../post";
+import Loading from "../loading"; // your animated loader
+
+const Home = () => {
   const size = useWindowSize();
-  /*
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      x: 0,
-      y: 0
-    };
 
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    this.parent = React.createRef();
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({width: window.innerWidth, height: window.innerHeight});
-  }
-
-
-  render() {
-*/
-
-useEffect(() => {
-  Post.preload();
-  Archive.preload();
-}, []);
+  useEffect(() => {
+    Post.preload();
+    Archive.preload();
+  }, []);
 
   return (
-    <HomeSession className="container" >
-      {/*<h1>  {size.width}px / {size.height}px</h1>*/}
-      <ServiceIntro />
-      <HomePosts />
-      {
-        /*
-        <Archive />
-        <SplitPane />
-        <PhotoText />
-        <ThreeScene />
-        */
-      }
-      <ShowAllPosts />
-    </HomeSession>
-  )
-}
+    <Suspense fallback={<Loading />}>
+      <HomeSection className="container">
+        <ServiceIntro />
+        <HomePosts />
+        <ShowAllPosts />
+      </HomeSection>
+    </Suspense>
+  );
+};
 
 export default connect(Home);
 
-/* 1 px offset fix */
-const HomeSession = styled.section`
+const HomeSection = styled.section\`
   position: relative;
   top: 0px;
-`;
+\`;
