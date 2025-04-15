@@ -1,3 +1,5 @@
+const isClient = typeof window !== "undefined";
+
 import React, { useEffect, Suspense } from "react";
 import { connect, styled } from "frontity";
 
@@ -19,13 +21,19 @@ const Home = () => {
   }, []);
 
   return (
-    <Suspense fallback={<Loading />}>
+    {isClient ? (<Suspense fallback={<Loading />}>
       <HomeSection className="container">
         <ServiceIntro />
         <HomePosts />
         <ShowAllPosts />
       </HomeSection>
-    </Suspense>
+    </Suspense>) : (}>
+      <HomeSection className="container">
+        <ServiceIntro />
+        <HomePosts />
+        <ShowAllPosts />
+      </HomeSection>
+    )}
   );
 };
 

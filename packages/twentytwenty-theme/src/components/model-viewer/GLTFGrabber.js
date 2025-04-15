@@ -1,3 +1,5 @@
+const isClient = typeof window !== "undefined";
+
 import { connect, styled } from 'frontity'
 import React, { useState, useEffect, useRef, Suspense } from 'react'
 import { Canvas, useFrame,  render, events, useLoader, useRender  } from '@react-three/fiber'
@@ -65,12 +67,17 @@ const GLTFGrabber =({ data1, data2, data3 }) => {
     <Canvas shadows dpr={[1, 2]} camera={{ position: [0, groundPosition/2 , data2/3], fov: 30 }}>
         <ambientLight intensity={0.3} />
         <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
-        <Suspense fallback={null}>
+        {isClient ? (<Suspense fallback={null}>
           <LoadModel data1={data1} data2={data2}/>
           <Environment preset="city" />
           <ContactShadows rotation-x={Math.PI / 2} position={[0, groundPosition, 0]} opacity={1} width={10} height={10} blur={1.2} far={3} />
           <MakeGrid/>
-        </Suspense>
+        </Suspense>) : (
+          <LoadModel data1={data1} data2={data2}/>
+          <Environment preset="city" />
+          <ContactShadows rotation-x={Math.PI / 2} position={[0, groundPosition, 0]} opacity={1} width={10} height={10} blur={1.2} far={3} />
+          <MakeGrid/>
+        )}
         <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
       </Canvas>
       </ModelViewerSection>
