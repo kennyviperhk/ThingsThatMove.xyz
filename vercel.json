@@ -23,13 +23,5 @@
         "Cache-Control": "public, max-age=604800"
       }
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Content-Security-Policy", "value": "media-src 'self' https://blog.thingsthatmove.xyz" }
-      ]
-    }
   ]
 }
