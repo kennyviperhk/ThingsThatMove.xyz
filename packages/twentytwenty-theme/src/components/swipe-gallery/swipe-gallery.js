@@ -7,8 +7,7 @@ import Link from "../link";
 import Swiper from 'react-id-swiper';
 import externalCss from './swiper-bundle.css';
 //import ArrowSVG from "../styles/arrowUp.svg";
-import TextLoop from "react-text-loop";
-
+import Marquee from "react-fast-marquee"; // <-- Replace TextLoop
 
 
 const SwipeGallery = ({ state, actions, libraries, data }) =>{
@@ -74,16 +73,19 @@ const ref = useRef(null);
   }
 
   const arrowLink = state.frontity.url+ "/wp-content/uploads/2022/03/arrowUp.svg"
+  const messages = ["Craftmanship", "Making-of", "Thought Process"];
   return (<SwipeGallerySection className="container" >
     <PhotoDiv>
       <BgH1Div>
-        <BgH1>
-        <TextLoop noWrap={true} interval={1500}>
-          <BgH1Span>Craftmanship</BgH1Span>{/*https://www.npmjs.com/package/react-text-transition*/}
-          <BgH1Span>Making-of</BgH1Span>
-          <BgH1Span>Thought Process</BgH1Span>
-        </TextLoop>
-        </BgH1>
+
+        <Marquee speed={50} gradient={false} pauseOnHover>
+            {messages.map((msg, index) => (
+              <BgH1 key={index}>
+                {msg}
+              </BgH1>
+            ))}
+          </Marquee>
+
       </BgH1Div>
     </PhotoDiv>
     <SwiperDiv ref={ref}>
@@ -189,7 +191,7 @@ const BgH1Div = styled.div`
 
 const BgH1 = styled.h1`
   text-align:right;
-  margin-right: -3vw;
+  margin-right: 3vw;
   overflow:hidden;
 `
 

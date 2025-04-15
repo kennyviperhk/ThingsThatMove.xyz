@@ -3,7 +3,8 @@ import React, { Component, Fragment, useEffect, useState } from "react";
 import { styled, keyframes } from "frontity";
 import { getMediaAttributes } from '../../helpers'
 import Link from "../link";
-import TextLoop from "react-text-loop";
+//import TextLoop from "react-text-loop";
+import Marquee from "react-fast-marquee"; // <-- Replace TextLoop
 import AchievementSublist from './achievement-sublist';
 
 const AchievementList = ({ data }) => {
@@ -68,9 +69,14 @@ const AchievementList = ({ data }) => {
     <MainDiv >
       <BgH1Div>
       <BgH1>
-      <TextLoop noWrap={true} interval={1500}>
-        {achievementListsLoop}
-      </TextLoop>
+
+      <Marquee speed={50} gradient={false} pauseOnHover>
+            {messages.map((msg, index) => (
+              <span key={index}>
+                {achievementListsLoop}
+              </span>
+            ))}
+      </Marquee>
       </BgH1>
       </BgH1Div>
         <OverallTableDiv css={showMoreBtn ? css`max-height: ${achievementLength}px;`:css`max-height: 400px;`}>

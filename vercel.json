@@ -3,7 +3,11 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@frontity/now"
+      "use": "@frontity/now",
+      "config": {
+        "installCommand": "npm install --legacy-peer-deps",
+        "buildCommand": "frontity build"
+      }
     }
   ]
 }
