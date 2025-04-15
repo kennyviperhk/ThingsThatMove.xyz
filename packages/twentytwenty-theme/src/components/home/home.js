@@ -21,13 +21,20 @@ const Home = () => {
   }, []);
 
   return (
-    {isClient ? (<Suspense fallback={<Loading />}>
+    {isClient ? (<>
+{isClient ? (<Suspense fallback={<Loading />}>
       <HomeSection className="container">
         <ServiceIntro />
         <HomePosts />
         <ShowAllPosts />
       </HomeSection>
     </Suspense>) : (}>
+      <HomeSection className="container">
+        <ServiceIntro />
+        <HomePosts />
+        <ShowAllPosts />
+      </HomeSection>
+    )}</>) : (}>
       <HomeSection className="container">
         <ServiceIntro />
         <HomePosts />

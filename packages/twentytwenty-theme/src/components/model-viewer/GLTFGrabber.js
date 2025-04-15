@@ -72,12 +72,12 @@ const GLTFGrabber =({ data1, data2, data3 }) => {
           <Environment preset="city" />
           <ContactShadows rotation-x={Math.PI / 2} position={[0, groundPosition, 0]} opacity={1} width={10} height={10} blur={1.2} far={3} />
           <MakeGrid/>
-        </Suspense>) : (
-          <LoadModel data1={data1} data2={data2}/>
+        </Suspense>) : (<>
+<LoadModel data1={data1} data2={data2}/>
           <Environment preset="city" />
           <ContactShadows rotation-x={Math.PI / 2} position={[0, groundPosition, 0]} opacity={1} width={10} height={10} blur={1.2} far={3} />
           <MakeGrid/>
-        )}
+        </>)}
         <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
       </Canvas>
       </ModelViewerSection>
