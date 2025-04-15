@@ -51,6 +51,7 @@ const FontFace = ({ state }) => {
       styles={css`
 
         @font-face {
+          font-display: swap;
           font-family: "Archiv Grotesk";
           font-style: normal;
           font-weight: 300;
@@ -59,6 +60,7 @@ const FontFace = ({ state }) => {
         }
 
         @font-face {
+          font-display: swap;
           font-family: "IBM Plex Sans";
           font-style: normal;
           font-weight: 500;
@@ -67,6 +69,7 @@ const FontFace = ({ state }) => {
         }
 
         @font-face {
+          font-display: swap;
           font-family: "IBM Plex Sans";
           font-style: normal;
           font-weight: 300;

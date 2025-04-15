@@ -28,6 +28,7 @@ const FontFace = ({ state }) => {
     <Global
       styles={css`
         @font-face {
+          font-display: swap;
           font-family: "Chakra Petch";
           font-style: normal
           font-weight: 300;
@@ -36,6 +37,7 @@ const FontFace = ({ state }) => {
         }
 
         @font-face {
+          font-display: swap;
           font-family: "Chakra Petch";
           font-style: normal;
           font-weight: 400;
@@ -44,6 +46,7 @@ const FontFace = ({ state }) => {
         }
 
         @font-face {
+          font-display: swap;
           font-family: "Chakra Petch";
           font-style: normal;
           font-weight: 700;
