@@ -7,14 +7,14 @@
     "frontity"
   ],
   "engines": {
-    "node": "18.x"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "scripts": {
     "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
     "build": "frontity build",
-    "serve": "frontity serve",
-    "vercel-build": "npm install --legacy-peer-deps && frontity build"
+    "serve": "frontity serve"
   },
   "prettier": {},
   "dependencies": {
