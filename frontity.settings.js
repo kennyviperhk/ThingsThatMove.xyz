@@ -1,4 +1,5 @@
 const settings = {
+  "outDir": "build",
   "name": "thingsthatmove.xyz",
   "state": {
     "frontity": {
