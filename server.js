@@ -1,6 +1,6 @@
-const path = require("path");
-const app = require("./build/server").default;
+const server = require("./build/server");
 
 module.exports = (req, res) => {
-  app(req, res);
+  const app = server.default || server;
+  return app(req, res);
 };

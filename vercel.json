@@ -2,25 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "nodeVersion": "18.x",
-        "installCommand": "npm install --legacy-peer-deps",
-        "buildCommand": "npm run build",
-        "includeFiles": ["build/**"] 
-      }
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/build/static/$1",
-      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/build/server.js" 
+      "dest": "/server.js"
     }
   ]
 }

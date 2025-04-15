@@ -13,7 +13,8 @@
     "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build --output=static",
-    "serve": "node build/server.js" 
+    "serve": "node build/server.js",
+    "vercel-build": "frontity build"
   },
   "prettier": {},
   "dependencies": {
