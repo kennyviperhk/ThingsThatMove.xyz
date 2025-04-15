@@ -31,7 +31,7 @@ const Home = () => {
 
 export default connect(Home);
 
-const HomeSection = styled.section\`
+const HomeSection = styled.section`
   position: relative;
   top: 0px;
-\`;
+`;
