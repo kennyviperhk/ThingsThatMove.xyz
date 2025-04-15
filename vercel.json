@@ -6,7 +6,7 @@
       "use": "@frontity/now",
       "config": {
         "installCommand": "npm install --legacy-peer-deps",
-        "buildCommand": "frontity build"
+        "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider frontity build"
       }
     }
   ]
