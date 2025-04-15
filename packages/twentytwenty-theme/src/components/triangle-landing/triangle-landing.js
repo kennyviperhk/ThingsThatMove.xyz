@@ -1,60 +1,46 @@
-import { connect, Global, css, styled, keyframes } from "frontity";
+import { connect } from "frontity";
 import React, { useEffect, useState, useRef } from "react";
-import Link from "../link";
 import Loading from "../loading";
-import { useWindowSize } from '../../helpers';
-import { Animated } from "react-animated-css";
+import { useWindowSize } from "../../helpers";
+import styled from "styled-components";
 
-const sectionHeight = 'calc(100vw / 2.2)';
-const sectionHeightPortrait = 'calc(100vw * 1.42)';
-
-const TriangleLanding = ({ state, actions }) => {
+const TriangleLanding = ({ state }) => {
   const [loaded, setLoaded] = useState(false);
   const [needsInteraction, setNeedsInteraction] = useState(false);
-  const videoRefs = useRef({ foreground: null, background: null });
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRefs = useRef({ foreground: null, background: null });
   const size = useWindowSize();
 
-  // ... keep your existing page detection logic and state variables ...
+  const landingData = state.source.get(state.router.link);
 
   useEffect(() => {
     const initializeVideos = async () => {
-      if (!landingData.isReady) return;
+      if (!landingData.isReady || !item?.background_media?.length || !item?.foreground_media?.length) return;
 
       try {
-        const videos = {
-          foreground: videoRefs.current.foreground,
-          background: videoRefs.current.background
-        };
+        const foreground = videoRefs.current.foreground;
+        const background = videoRefs.current.background;
 
-        // Wait for video metadata to load
+        foreground.muted = true;
+        foreground.playsInline = true;
+        background.muted = true;
+        background.playsInline = true;
+
         await Promise.all([
-          new Promise((resolve) => {
-            videos.foreground.onloadedmetadata = resolve;
-            videos.foreground.muted = true;
-            videos.foreground.playsInline = true;
-          }),
-          new Promise((resolve) => {
-            videos.background.onloadedmetadata = resolve;
-            videos.background.muted = true;
-            videos.background.playsInline = true;
-          })
+          new Promise((resolve) => (foreground.onloadedmetadata = resolve)),
+          new Promise((resolve) => (background.onloadedmetadata = resolve)),
         ]);
 
-        // Try autoplaying
         try {
-          await Promise.all([
-            videos.foreground.play(),
-            videos.background.play()
-          ]);
+          await Promise.all([foreground.play(), background.play()]);
           setVideoLoaded(true);
           setLoaded(true);
-        } catch (autoplayError) {
-          console.log('Autoplay blocked, showing fallback');
+        } catch (err) {
+          console.warn("Autoplay blocked:", err);
           setNeedsInteraction(true);
         }
-      } catch (error) {
-        console.error('Video initialization error:', error);
+      } catch (err) {
+        console.error("Video init failed:", err);
         setNeedsInteraction(true);
       }
     };
@@ -66,102 +52,108 @@ const TriangleLanding = ({ state, actions }) => {
     try {
       await Promise.all([
         videoRefs.current.foreground.play(),
-        videoRefs.current.background.play()
+        videoRefs.current.background.play(),
       ]);
       setVideoLoaded(true);
       setNeedsInteraction(false);
       setLoaded(true);
-    } catch (error) {
-      console.error('Manual play failed:', error);
+    } catch (err) {
+      console.error("Manual play failed:", err);
     }
   };
 
-  // Modified video rendering section
-  const renderVideo = (type, mediaItem) => (
-    <VideoPlayerNative 
-      ref={el => videoRefs.current[type] = el}
+  const renderVideo = (type, src) => (
+    <Video
+      ref={(el) => (videoRefs.current[type] = el)}
       playsInline
       muted
       loop
       preload="auto"
-      className={type === 'foreground' ? 'foreground-video' : 'background-video'}
+      className={type}
     >
-      <source src={mediaItem.guid} type="video/mp4" />
-      Your browser does not support the video tag.
-    </VideoPlayerNative>
+      <source src={src} type="video/mp4" />
+    </Video>
   );
 
-  // Modified background media rendering
-  const backgroundMedia = item?.background_media[0] && (
-    <BackgroundImageDiv>
-      {renderVideo('background', item.background_media[0])}
-      {!videoLoaded && <LoadingOverlay />}
-    </BackgroundImageDiv>
-  );
-
-  // Add loading overlay component
-  const LoadingOverlay = () => (
-    <div className="loading-overlay">
-      <div className="loading-spinner" />
-      {needsInteraction && (
-        <button 
-          onClick={handlePlayClick}
-          className="play-button"
-        >
-          Click to Start
-        </button>
-      )}
-    </div>
-  );
-
-  // ... keep your existing conditional rendering logic ...
+  const item = landingData?.acf || {};
 
   return landingData.isReady ? (
-    <TriangleSection className="container">
-      {/* ... keep your existing JSX structure ... */}
-      {backgroundMedia}
-      {!loaded && <LoadingOverlay />}
-    </TriangleSection>
-  ) : <Loading />;
+    <Container>
+      <Background>
+        {item.background_media?.[0]?.guid && renderVideo("background", item.background_media[0].guid)}
+      </Background>
+      <Foreground>
+        {item.foreground_media?.[0]?.guid && renderVideo("foreground", item.foreground_media[0].guid)}
+      </Foreground>
+
+      {!videoLoaded && (
+        <Overlay>
+          <Spinner />
+          {needsInteraction && (
+            <PlayButton onClick={handlePlayClick}>Click to Start</PlayButton>
+          )}
+        </Overlay>
+      )}
+    </Container>
+  ) : (
+    <Loading />
+  );
 };
 
-// Add new styled components
-const LoadingOverlay = styled.div`
+export default connect(TriangleLanding);
+
+// --- Styled Components ---
+
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+`;
+
+const Background = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+`;
+
+const Foreground = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+`;
+
+const Video = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  flex-direction: column;
+`;
 
-  .loading-spinner {
-    border: 4px solid rgba(255,255,255,0.3);
-    border-radius: 50%;
-    border-top: 4px solid #fff;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-  }
-
-  .play-button {
-    position: absolute;
-    padding: 12px 24px;
-    background: #fff;
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: opacity 0.3s;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
+const Spinner = styled.div`
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
 
   @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -169,6 +161,17 @@ const LoadingOverlay = styled.div`
   }
 `;
 
-// ... keep your existing styled components ...
+const PlayButton = styled.button`
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 
-export default connect(TriangleLanding);
+  &:hover {
+    opacity: 0.85;
+  }
+`;
