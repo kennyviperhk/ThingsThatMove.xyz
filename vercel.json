@@ -8,7 +8,7 @@
         "nodeVersion": "18.x",
         "installCommand": "npm install --legacy-peer-deps",
         "buildCommand": "npm run build",
-        "includeFiles": ["build/**"] // Include build artifacts
+        "includeFiles": ["build/**"] 
       }
     }
   ],
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/build/server.js" // Route all requests to the server
+      "dest": "/build/server.js" 
     }
   ]
 }
