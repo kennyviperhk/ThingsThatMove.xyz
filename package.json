@@ -12,7 +12,7 @@
   "scripts": {
     "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build --output=static",
     "serve": "frontity serve"
   },
   "prettier": {},
