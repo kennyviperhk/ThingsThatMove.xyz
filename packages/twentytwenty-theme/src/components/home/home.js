@@ -20,32 +20,15 @@ const Home = () => {
     Archive.preload();
   }, []);
 
-  return (
-    isClient ? (
-      <Suspense fallback={<Loading />}>
-        <HomeSection className="container">
-          <ServiceIntro />
-          <HomePosts />
-          <ShowAllPosts />
-        </HomeSection>
-      </Suspense>
-    ) : null
-  );
-      </HomeSection>
-    </Suspense>) : (}>
+  return isClient ? (
+    <Suspense fallback={<Loading />}>
       <HomeSection className="container">
         <ServiceIntro />
         <HomePosts />
         <ShowAllPosts />
       </HomeSection>
-    )}</>) : (}>
-      <HomeSection className="container">
-        <ServiceIntro />
-        <HomePosts />
-        <ShowAllPosts />
-      </HomeSection>
-    )}
-  );
+    </Suspense>
+  ) : null;
 };
 
 export default connect(Home);
