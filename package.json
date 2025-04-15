@@ -37,7 +37,7 @@
     "react-id-swiper": "^4.0.0",
     "react-player": "^2.14.0",
     "swiper": "^11.0.5",
-    "three": "^0.163.0",
+    "three": "^0.138.0",
     "uuid": "^11.1.0"
   }
 }
