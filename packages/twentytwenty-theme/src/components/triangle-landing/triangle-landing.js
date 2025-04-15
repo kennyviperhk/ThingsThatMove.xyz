@@ -1,7 +1,7 @@
 import { connect, Global, css, styled, keyframes } from "frontity";
 import React, { useEffect, useState } from "react";
 import Link from "../link";
-import Loading from "../loading";
+//import Loading from "../loading";
 //import TextLoop from "react-text-loop";
 import { useWindowSize } from '../../helpers'
 import {Animated} from "react-animated-css";
@@ -338,7 +338,7 @@ const TriangleLanding = ({ state, actions }) => {
     </FrontImageDiv>
     {backgroundMedia}
   </TriangleSection>
-  ) : <Loading />;
+  ) : <span />;
 
 }
 
