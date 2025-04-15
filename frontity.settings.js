@@ -7,6 +7,9 @@ const settings = {
       "description": ""
     }
   },
+  "bundle": {
+    "splitting": true, // Enable code-splitting
+  },
   "packages": [
     {
       "name": "@frontity/twentytwenty-theme",
