@@ -7,7 +7,7 @@
     "frontity"
   ],
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "frontity serve --port $PORT",
