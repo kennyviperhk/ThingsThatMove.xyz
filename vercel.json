@@ -4,6 +4,11 @@
       "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
       "NODE_OPTIONS": "--openssl-legacy-provider"
     }
-  }
+  },
+  "buildCommand": "npx frontity build",
+  "outputDirectory": ".frontity",
+  "cleanUrls": true
 }
+
+
 
