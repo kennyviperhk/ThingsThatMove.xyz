@@ -1,0 +1,1182 @@
+{
+  "errors": [],
+  "warnings": [],
+  "hash": "99f5dd94cfe2bb79c81a",
+  "publicPath": "",
+  "outputPath": "C:\\Github\\ThingsThatMove.xyz\\build\\static",
+  "assetsByChunkName": {
+    "achievement-list": "achievement-list.module.js",
+    "acknowledgment": "acknowledgment.module.js",
+    "archive": "archive.module.js",
+    "big-vertical-gallery": "big-vertical-gallery.module.js",
+    "bio-text-section": "bio-text-section.module.js",
+    "featured-media-home-artwork-loaded": "featured-media-home-artwork-loaded.module.js",
+    "featured-media-loaded": "featured-media-loaded.module.js",
+    "featured-media-standard-loaded": "featured-media-standard-loaded.module.js",
+    "full-width-gallery": "full-width-gallery.module.js",
+    "home": "home.module.js",
+    "model-viewer": "model-viewer.module.js",
+    "post": "post.module.js",
+    "post-item-artwork-loaded": "post-item-artwork-loaded.module.js",
+    "post-item-standard-loaded": "post-item-standard-loaded.module.js",
+    "post-video-text": "post-video-text.module.js",
+    "post~post-item-artwork-loaded~post-item-standard-loaded": "post~post-item-artwork-loaded~post-item-standard-loaded.module.js",
+    "reactPlayerDailyMotion": "reactPlayerDailyMotion.module.js",
+    "reactPlayerFacebook": "reactPlayerFacebook.module.js",
+    "reactPlayerKaltura": "reactPlayerKaltura.module.js",
+    "reactPlayerMixcloud": "reactPlayerMixcloud.module.js",
+    "reactPlayerMux": "reactPlayerMux.module.js",
+    "reactPlayerPreview": "reactPlayerPreview.module.js",
+    "reactPlayerSoundCloud": "reactPlayerSoundCloud.module.js",
+    "reactPlayerStreamable": "reactPlayerStreamable.module.js",
+    "reactPlayerTwitch": "reactPlayerTwitch.module.js",
+    "reactPlayerVidyard": "reactPlayerVidyard.module.js",
+    "reactPlayerVimeo": "reactPlayerVimeo.module.js",
+    "reactPlayerWistia": "reactPlayerWistia.module.js",
+    "reactPlayerYouTube": "reactPlayerYouTube.module.js",
+    "service-intro": "service-intro.module.js",
+    "show-all-posts": "show-all-posts.module.js",
+    "swipe-gallery": "swipe-gallery.module.js",
+    "tech-info": "tech-info.module.js",
+    "thingsthatmove.xyz": "thingsthatmove.xyz.module.js",
+    "triangle-landing": "triangle-landing.module.js",
+    "two-column-gallery": "two-column-gallery.module.js",
+    "vendors~bio-text-section~triangle-landing": "vendors~bio-text-section~triangle-landing.module.js",
+    "vendors~model-viewer": "vendors~model-viewer.module.js",
+    "vendors~post-video-text": "vendors~post-video-text.module.js",
+    "vendors~reactPlayerFilePlayer": "vendors~reactPlayerFilePlayer.module.js",
+    "vendors~swipe-gallery": "vendors~swipe-gallery.module.js"
+  },
+  "assets": [
+    {
+      "name": "achievement-list.module.js",
+      "size": 218170,
+      "chunks": [
+        "achievement-list"
+      ],
+      "chunkNames": [
+        "achievement-list"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "acknowledgment.module.js",
+      "size": 58912,
+      "chunks": [
+        "acknowledgment"
+      ],
+      "chunkNames": [
+        "acknowledgment"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "archive.module.js",
+      "size": 423036,
+      "chunks": [
+        "archive"
+      ],
+      "chunkNames": [
+        "archive"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "big-vertical-gallery.module.js",
+      "size": 25973,
+      "chunks": [
+        "big-vertical-gallery"
+      ],
+      "chunkNames": [
+        "big-vertical-gallery"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "bio-text-section.module.js",
+      "size": 113491,
+      "chunks": [
+        "bio-text-section"
+      ],
+      "chunkNames": [
+        "bio-text-section"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "featured-media-home-artwork-loaded.module.js",
+      "size": 13864,
+      "chunks": [
+        "featured-media-home-artwork-loaded"
+      ],
+      "chunkNames": [
+        "featured-media-home-artwork-loaded"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "featured-media-loaded.module.js",
+      "size": 12546,
+      "chunks": [
+        "featured-media-loaded"
+      ],
+      "chunkNames": [
+        "featured-media-loaded"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "featured-media-standard-loaded.module.js",
+      "size": 13302,
+      "chunks": [
+        "featured-media-standard-loaded"
+      ],
+      "chunkNames": [
+        "featured-media-standard-loaded"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "fonts/ArchivGroteskTrial-RegularTrial.woff2",
+      "size": 9428,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/twentytwenty-theme/src/fonts/ArchivGroteskTrial-RegularTrial.woff2"
+      },
+      "emitted": false
+    },
+    {
+      "name": "full-width-gallery.module.js",
+      "size": 24025,
+      "chunks": [
+        "full-width-gallery"
+      ],
+      "chunkNames": [
+        "full-width-gallery"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "home.module.js",
+      "size": 41646,
+      "chunks": [
+        "home"
+      ],
+      "chunkNames": [
+        "home"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "model-viewer.module.js",
+      "size": 24594,
+      "chunks": [
+        "model-viewer"
+      ],
+      "chunkNames": [
+        "model-viewer"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "post-item-artwork-loaded.module.js",
+      "size": 106815,
+      "chunks": [
+        "post-item-artwork-loaded"
+      ],
+      "chunkNames": [
+        "post-item-artwork-loaded"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "post-item-standard-loaded.module.js",
+      "size": 65413,
+      "chunks": [
+        "post-item-standard-loaded"
+      ],
+      "chunkNames": [
+        "post-item-standard-loaded"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "post-video-text.module.js",
+      "size": 32957,
+      "chunks": [
+        "post-video-text"
+      ],
+      "chunkNames": [
+        "post-video-text"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "post.module.js",
+      "size": 178422,
+      "chunks": [
+        "post"
+      ],
+      "chunkNames": [
+        "post"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "post~post-item-artwork-loaded~post-item-standard-loaded.module.js",
+      "size": 55152,
+      "chunks": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded"
+      ],
+      "chunkNames": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerDailyMotion.module.js",
+      "size": 22638,
+      "chunks": [
+        "reactPlayerDailyMotion"
+      ],
+      "chunkNames": [
+        "reactPlayerDailyMotion"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerFacebook.module.js",
+      "size": 23067,
+      "chunks": [
+        "reactPlayerFacebook"
+      ],
+      "chunkNames": [
+        "reactPlayerFacebook"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerKaltura.module.js",
+      "size": 19826,
+      "chunks": [
+        "reactPlayerKaltura"
+      ],
+      "chunkNames": [
+        "reactPlayerKaltura"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerMixcloud.module.js",
+      "size": 20403,
+      "chunks": [
+        "reactPlayerMixcloud"
+      ],
+      "chunkNames": [
+        "reactPlayerMixcloud"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerMux.module.js",
+      "size": 35373,
+      "chunks": [
+        "reactPlayerMux"
+      ],
+      "chunkNames": [
+        "reactPlayerMux"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerPreview.module.js",
+      "size": 22159,
+      "chunks": [
+        "reactPlayerPreview"
+      ],
+      "chunkNames": [
+        "reactPlayerPreview"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerSoundCloud.module.js",
+      "size": 21933,
+      "chunks": [
+        "reactPlayerSoundCloud"
+      ],
+      "chunkNames": [
+        "reactPlayerSoundCloud"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerStreamable.module.js",
+      "size": 20614,
+      "chunks": [
+        "reactPlayerStreamable"
+      ],
+      "chunkNames": [
+        "reactPlayerStreamable"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerTwitch.module.js",
+      "size": 23067,
+      "chunks": [
+        "reactPlayerTwitch"
+      ],
+      "chunkNames": [
+        "reactPlayerTwitch"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerVidyard.module.js",
+      "size": 21795,
+      "chunks": [
+        "reactPlayerVidyard"
+      ],
+      "chunkNames": [
+        "reactPlayerVidyard"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerVimeo.module.js",
+      "size": 25910,
+      "chunks": [
+        "reactPlayerVimeo"
+      ],
+      "chunkNames": [
+        "reactPlayerVimeo"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerWistia.module.js",
+      "size": 25497,
+      "chunks": [
+        "reactPlayerWistia"
+      ],
+      "chunkNames": [
+        "reactPlayerWistia"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "reactPlayerYouTube.module.js",
+      "size": 32840,
+      "chunks": [
+        "reactPlayerYouTube"
+      ],
+      "chunkNames": [
+        "reactPlayerYouTube"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "service-intro.module.js",
+      "size": 58566,
+      "chunks": [
+        "service-intro"
+      ],
+      "chunkNames": [
+        "service-intro"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "show-all-posts.module.js",
+      "size": 12556,
+      "chunks": [
+        "show-all-posts"
+      ],
+      "chunkNames": [
+        "show-all-posts"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "swipe-gallery.module.js",
+      "size": 191619,
+      "chunks": [
+        "swipe-gallery"
+      ],
+      "chunkNames": [
+        "swipe-gallery"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "tech-info.module.js",
+      "size": 54657,
+      "chunks": [
+        "tech-info"
+      ],
+      "chunkNames": [
+        "tech-info"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "thingsthatmove.xyz.module.js",
+      "size": 7432751,
+      "chunks": [
+        "thingsthatmove.xyz"
+      ],
+      "chunkNames": [
+        "thingsthatmove.xyz"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "triangle-landing.module.js",
+      "size": 1298388,
+      "chunks": [
+        "triangle-landing"
+      ],
+      "chunkNames": [
+        "triangle-landing"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "two-column-gallery.module.js",
+      "size": 14129,
+      "chunks": [
+        "two-column-gallery"
+      ],
+      "chunkNames": [
+        "two-column-gallery"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~bio-text-section~triangle-landing.module.js",
+      "size": 621273,
+      "chunks": [
+        "vendors~bio-text-section~triangle-landing"
+      ],
+      "chunkNames": [
+        "vendors~bio-text-section~triangle-landing"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~model-viewer.module.js",
+      "size": 27441268,
+      "chunks": [
+        "vendors~model-viewer"
+      ],
+      "chunkNames": [
+        "vendors~model-viewer"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~post-video-text.module.js",
+      "size": 186979,
+      "chunks": [
+        "vendors~post-video-text"
+      ],
+      "chunkNames": [
+        "vendors~post-video-text"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~reactPlayerFilePlayer.module.js",
+      "size": 59408,
+      "chunks": [
+        "vendors~reactPlayerFilePlayer"
+      ],
+      "chunkNames": [
+        "vendors~reactPlayerFilePlayer"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~swipe-gallery.module.js",
+      "size": 467609,
+      "chunks": [
+        "vendors~swipe-gallery"
+      ],
+      "chunkNames": [
+        "vendors~swipe-gallery"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "namedChunkGroups": {
+    "thingsthatmove.xyz": {
+      "chunks": [
+        "thingsthatmove.xyz"
+      ],
+      "assets": [
+        "thingsthatmove.xyz.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "archive": {
+      "chunks": [
+        "archive"
+      ],
+      "assets": [
+        "archive.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "home": {
+      "chunks": [
+        "home"
+      ],
+      "assets": [
+        "home.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "post": {
+      "chunks": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded",
+        "post"
+      ],
+      "assets": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded.module.js",
+        "post.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "triangle-landing": {
+      "chunks": [
+        "vendors~bio-text-section~triangle-landing",
+        "triangle-landing"
+      ],
+      "assets": [
+        "vendors~bio-text-section~triangle-landing.module.js",
+        "triangle-landing.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "post-item-artwork-loaded": {
+      "chunks": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded",
+        "post-item-artwork-loaded"
+      ],
+      "assets": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded.module.js",
+        "post-item-artwork-loaded.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "post-item-standard-loaded": {
+      "chunks": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded",
+        "post-item-standard-loaded"
+      ],
+      "assets": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded.module.js",
+        "post-item-standard-loaded.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "service-intro": {
+      "chunks": [
+        "service-intro"
+      ],
+      "assets": [
+        "service-intro.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "show-all-posts": {
+      "chunks": [
+        "show-all-posts"
+      ],
+      "assets": [
+        "show-all-posts.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "featured-media-loaded": {
+      "chunks": [
+        "featured-media-loaded"
+      ],
+      "assets": [
+        "featured-media-loaded.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "swipe-gallery": {
+      "chunks": [
+        "vendors~swipe-gallery",
+        "swipe-gallery"
+      ],
+      "assets": [
+        "vendors~swipe-gallery.module.js",
+        "swipe-gallery.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "bio-text-section": {
+      "chunks": [
+        "vendors~bio-text-section~triangle-landing",
+        "bio-text-section"
+      ],
+      "assets": [
+        "vendors~bio-text-section~triangle-landing.module.js",
+        "bio-text-section.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "achievement-list": {
+      "chunks": [
+        "achievement-list"
+      ],
+      "assets": [
+        "achievement-list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "post-video-text": {
+      "chunks": [
+        "vendors~post-video-text",
+        "post-video-text"
+      ],
+      "assets": [
+        "vendors~post-video-text.module.js",
+        "post-video-text.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "full-width-gallery": {
+      "chunks": [
+        "full-width-gallery"
+      ],
+      "assets": [
+        "full-width-gallery.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "big-vertical-gallery": {
+      "chunks": [
+        "big-vertical-gallery"
+      ],
+      "assets": [
+        "big-vertical-gallery.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "two-column-gallery": {
+      "chunks": [
+        "two-column-gallery"
+      ],
+      "assets": [
+        "two-column-gallery.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "acknowledgment": {
+      "chunks": [
+        "acknowledgment"
+      ],
+      "assets": [
+        "acknowledgment.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "tech-info": {
+      "chunks": [
+        "tech-info"
+      ],
+      "assets": [
+        "tech-info.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "model-viewer": {
+      "chunks": [
+        "vendors~model-viewer",
+        "model-viewer"
+      ],
+      "assets": [
+        "vendors~model-viewer.module.js",
+        "model-viewer.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "featured-media-home-artwork-loaded": {
+      "chunks": [
+        "featured-media-home-artwork-loaded"
+      ],
+      "assets": [
+        "featured-media-home-artwork-loaded.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "featured-media-standard-loaded": {
+      "chunks": [
+        "featured-media-standard-loaded"
+      ],
+      "assets": [
+        "featured-media-standard-loaded.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerYouTube": {
+      "chunks": [
+        "reactPlayerYouTube"
+      ],
+      "assets": [
+        "reactPlayerYouTube.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerSoundCloud": {
+      "chunks": [
+        "reactPlayerSoundCloud"
+      ],
+      "assets": [
+        "reactPlayerSoundCloud.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerVimeo": {
+      "chunks": [
+        "reactPlayerVimeo"
+      ],
+      "assets": [
+        "reactPlayerVimeo.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerMux": {
+      "chunks": [
+        "reactPlayerMux"
+      ],
+      "assets": [
+        "reactPlayerMux.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerFacebook": {
+      "chunks": [
+        "reactPlayerFacebook"
+      ],
+      "assets": [
+        "reactPlayerFacebook.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerStreamable": {
+      "chunks": [
+        "reactPlayerStreamable"
+      ],
+      "assets": [
+        "reactPlayerStreamable.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerWistia": {
+      "chunks": [
+        "reactPlayerWistia"
+      ],
+      "assets": [
+        "reactPlayerWistia.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerTwitch": {
+      "chunks": [
+        "reactPlayerTwitch"
+      ],
+      "assets": [
+        "reactPlayerTwitch.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerDailyMotion": {
+      "chunks": [
+        "reactPlayerDailyMotion"
+      ],
+      "assets": [
+        "reactPlayerDailyMotion.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerMixcloud": {
+      "chunks": [
+        "reactPlayerMixcloud"
+      ],
+      "assets": [
+        "reactPlayerMixcloud.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerVidyard": {
+      "chunks": [
+        "reactPlayerVidyard"
+      ],
+      "assets": [
+        "reactPlayerVidyard.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerKaltura": {
+      "chunks": [
+        "reactPlayerKaltura"
+      ],
+      "assets": [
+        "reactPlayerKaltura.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerFilePlayer": {
+      "chunks": [
+        "vendors~reactPlayerFilePlayer"
+      ],
+      "assets": [
+        "vendors~reactPlayerFilePlayer.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "reactPlayerPreview": {
+      "chunks": [
+        "reactPlayerPreview"
+      ],
+      "assets": [
+        "reactPlayerPreview.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "achievement-list",
+      "files": [
+        "achievement-list.module.js"
+      ]
+    },
+    {
+      "id": "acknowledgment",
+      "files": [
+        "acknowledgment.module.js"
+      ]
+    },
+    {
+      "id": "archive",
+      "files": [
+        "archive.module.js"
+      ]
+    },
+    {
+      "id": "big-vertical-gallery",
+      "files": [
+        "big-vertical-gallery.module.js"
+      ]
+    },
+    {
+      "id": "bio-text-section",
+      "files": [
+        "bio-text-section.module.js"
+      ]
+    },
+    {
+      "id": "featured-media-home-artwork-loaded",
+      "files": [
+        "featured-media-home-artwork-loaded.module.js"
+      ]
+    },
+    {
+      "id": "featured-media-loaded",
+      "files": [
+        "featured-media-loaded.module.js"
+      ]
+    },
+    {
+      "id": "featured-media-standard-loaded",
+      "files": [
+        "featured-media-standard-loaded.module.js"
+      ]
+    },
+    {
+      "id": "full-width-gallery",
+      "files": [
+        "full-width-gallery.module.js"
+      ]
+    },
+    {
+      "id": "home",
+      "files": [
+        "home.module.js"
+      ]
+    },
+    {
+      "id": "model-viewer",
+      "files": [
+        "model-viewer.module.js"
+      ]
+    },
+    {
+      "id": "post",
+      "files": [
+        "post.module.js"
+      ]
+    },
+    {
+      "id": "post-item-artwork-loaded",
+      "files": [
+        "post-item-artwork-loaded.module.js"
+      ]
+    },
+    {
+      "id": "post-item-standard-loaded",
+      "files": [
+        "post-item-standard-loaded.module.js"
+      ]
+    },
+    {
+      "id": "post-video-text",
+      "files": [
+        "post-video-text.module.js"
+      ]
+    },
+    {
+      "id": "post~post-item-artwork-loaded~post-item-standard-loaded",
+      "files": [
+        "post~post-item-artwork-loaded~post-item-standard-loaded.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerDailyMotion",
+      "files": [
+        "reactPlayerDailyMotion.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerFacebook",
+      "files": [
+        "reactPlayerFacebook.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerKaltura",
+      "files": [
+        "reactPlayerKaltura.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerMixcloud",
+      "files": [
+        "reactPlayerMixcloud.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerMux",
+      "files": [
+        "reactPlayerMux.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerPreview",
+      "files": [
+        "reactPlayerPreview.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerSoundCloud",
+      "files": [
+        "reactPlayerSoundCloud.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerStreamable",
+      "files": [
+        "reactPlayerStreamable.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerTwitch",
+      "files": [
+        "reactPlayerTwitch.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerVidyard",
+      "files": [
+        "reactPlayerVidyard.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerVimeo",
+      "files": [
+        "reactPlayerVimeo.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerWistia",
+      "files": [
+        "reactPlayerWistia.module.js"
+      ]
+    },
+    {
+      "id": "reactPlayerYouTube",
+      "files": [
+        "reactPlayerYouTube.module.js"
+      ]
+    },
+    {
+      "id": "service-intro",
+      "files": [
+        "service-intro.module.js"
+      ]
+    },
+    {
+      "id": "show-all-posts",
+      "files": [
+        "show-all-posts.module.js"
+      ]
+    },
+    {
+      "id": "swipe-gallery",
+      "files": [
+        "swipe-gallery.module.js"
+      ]
+    },
+    {
+      "id": "tech-info",
+      "files": [
+        "tech-info.module.js"
+      ]
+    },
+    {
+      "id": "thingsthatmove.xyz",
+      "files": [
+        "thingsthatmove.xyz.module.js"
+      ]
+    },
+    {
+      "id": "triangle-landing",
+      "files": [
+        "triangle-landing.module.js"
+      ]
+    },
+    {
+      "id": "two-column-gallery",
+      "files": [
+        "two-column-gallery.module.js"
+      ]
+    },
+    {
+      "id": "vendors~bio-text-section~triangle-landing",
+      "files": [
+        "vendors~bio-text-section~triangle-landing.module.js"
+      ]
+    },
+    {
+      "id": "vendors~model-viewer",
+      "files": [
+        "vendors~model-viewer.module.js"
+      ]
+    },
+    {
+      "id": "vendors~post-video-text",
+      "files": [
+        "vendors~post-video-text.module.js"
+      ]
+    },
+    {
+      "id": "vendors~reactPlayerFilePlayer",
+      "files": [
+        "vendors~reactPlayerFilePlayer.module.js"
+      ]
+    },
+    {
+      "id": "vendors~swipe-gallery",
+      "files": [
+        "vendors~swipe-gallery.module.js"
+      ]
+    }
+  ]
+}
