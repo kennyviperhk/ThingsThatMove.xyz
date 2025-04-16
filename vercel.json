@@ -1,34 +1,40 @@
-{ "version": 2,
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "builds": [
     {
       "src": "server.js",
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
-    },
-	{
-      "src": "/wp-content/uploads/(.*)",
-      "dest": "https://blog.thingsthatmove.xyz/wp-content/uploads/$1",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Cache-Control": "public, max-age=604800"
-      }
-    }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/static/(.*)",
+      "destination": "/static/$1"
+    },
+    {
+      "source": "/wp-content/uploads/(.*)",
+      "destination": "https://blog.thingsthatmove.xyz/wp-content/uploads/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/server.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/wp-content/uploads/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
     }
   ]
 }
