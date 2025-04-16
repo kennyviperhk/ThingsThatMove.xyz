@@ -6,7 +6,6 @@
   "keywords": [
     "frontity"
   ],
-  "type": "module",
   "engines": {
     "npm": ">=6.0.0"
   },
