@@ -96,7 +96,7 @@ const Theme = ({ state, libraries }) => {
         </Main>
       </div>
       {inject()}
-
+    {/*    <Footer />*/}
       <FontFaces />
     </>
   );
