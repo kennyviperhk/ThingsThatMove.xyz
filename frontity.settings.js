@@ -4,38 +4,25 @@ const settings = {
     "frontity": {
       "url": "https://blog.thingsthatmove.xyz",
       "title": "Things That Move Ltd.",
-      "description": ""
+      "description": "Artwork, Design, Technology"
     }
+  },
+  source: {
+    url: "https://thingsthatmove.xyz", // keep this pointing to your WP site
+    preFetch: [
+      "/landings/home/",
+      "/landings/bio/",
+      "/landings/interactive-digital/",
+      "/landings/tech-research/",
+      "/landings/kinetics-robotics/"
+    ]
   },
   "bundle": {
     "splitting": true, 
   },
   "packages": [
     {
-      "name": "@frontity/twentytwenty-theme",
-      "state": {
-        "theme": {
-          "menu": [
-
-            [
-              "Bio",
-              "/bio/"
-            ],
-            [
-              "Work",
-              "/2019/solo-exhibition-moving-average-goethe-institut-hong-kong/"
-            ],
-            [
-              "Press",
-              "/press_all/"
-            ]
-          ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+      "name": "@frontity/twentytwenty-theme"
     },
     {
       "name": "@frontity/wp-source",
