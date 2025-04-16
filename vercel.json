@@ -4,6 +4,8 @@
   ],
   "routes": [
     { "src": "/static/(.*)", "dest": "/build/static/$1" },
+    { "src": "/bundling/(.*)", "dest": "/build/bundling/$1" },
+    { "src": "/client/(.*)", "dest": "/build/client/$1" },
     { "src": "/(.*)", "dest": "/server.js" }
   ]
 }
