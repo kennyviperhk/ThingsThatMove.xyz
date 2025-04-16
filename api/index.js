@@ -1,15 +1,6 @@
-const { default: server } = require("@frontity/core/server");
-const http = require("http");
+const path = require("path");
+const server = require(path.join(__dirname, "..", "build", "server.js")).default;
 
 module.exports = async (req, res) => {
-  const { url, method, headers } = req;
-
-  req.url = url;
-  req.method = method;
-  req.headers = headers;
-
-  res.setHeader("Access-Control-Allow-Origin", "*");
-
-  const nodeServer = http.createServer(server);
-  nodeServer.emit("request", req, res);
+  await server(req, res);
 };
