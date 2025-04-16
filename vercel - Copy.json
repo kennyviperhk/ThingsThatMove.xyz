@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    },
+	{
+      "src": "/wp-content/uploads/(.*)",
+      "dest": "https://blog.thingsthatmove.xyz/wp-content/uploads/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "public, max-age=604800"
+      }
+    }
+  ]
+}
