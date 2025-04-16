@@ -3,7 +3,21 @@
     { "src": "server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/build/static/$1" },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/build/static/$1"
+    },
+    {
+      "src": "/bundling/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/build/bundling/$1"
+    },
+    {
+      "src": "/client/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/build/client/$1"
+    },
     { "src": "/(.*)", "dest": "/server.js" }
   ]
 }
