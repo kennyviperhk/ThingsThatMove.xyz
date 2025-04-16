@@ -1,40 +1,23 @@
 {
-  "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
   "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
+    { "src": "server.js", "use": "@vercel/node" }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/static/(.*)",
-      "destination": "/static/$1"
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/build/static/$1"
     },
     {
-      "source": "/wp-content/uploads/(.*)",
-      "destination": "https://blog.thingsthatmove.xyz/wp-content/uploads/$1"
+      "src": "/bundling/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/build/bundling/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/server.js"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/wp-content/uploads/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800"
-        }
-      ]
-    }
+      "src": "/client/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" },
+      "dest": "/build/client/$1"
+    },
+    { "src": "/(.*)", "dest": "/server.js" }
   ]
 }
