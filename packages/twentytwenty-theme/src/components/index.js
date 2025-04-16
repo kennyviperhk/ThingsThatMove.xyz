@@ -80,8 +80,8 @@ const Theme = ({ state, libraries }) => {
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
           <Header />
-        {/* Add the header of the site. */}
-          <TriangleLanding />
+        {/* Add the header of the site. 
+          <TriangleLanding />*/}
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
@@ -96,7 +96,7 @@ const Theme = ({ state, libraries }) => {
         </Main>
       </div>
       {inject()}
-      <Footer />
+
       <FontFaces />
     </>
   );
