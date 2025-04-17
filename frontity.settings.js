@@ -14,7 +14,8 @@ const settings = {
       "/landings/bio/",
       "/landings/interactive-digital/",
       "/landings/tech-research/",
-      "/landings/kinetics-robotics/"
+      "/landings/kinetics-robotics/",
+	  "/landings/footer/"
     ]
   },
   "bundle": {
