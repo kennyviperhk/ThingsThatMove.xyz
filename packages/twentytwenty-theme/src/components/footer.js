@@ -33,14 +33,16 @@ const Footer = ({ state, actions }) => {
   //let uri = "mailto:me@thingsthatmove.xyz"
   const p = "landings/";
   const extraPostLink = `/${p}`;
-  console.log("actions : ");
-  console.log(actions);
-  console.log("state : ");
-  console.log(state);
-  console.log("extraPostLink : ");
-  console.log(extraPostLink);
+
   let landingData = state.source.get(extraPostLink);
   useEffect(() => {
+    console.log("📦 Fetching footer route:", extraPostLink);
+    console.log("actions : ");
+    console.log(actions);
+    console.log("state : ");
+    console.log(state);
+    console.log("extraPostLink : ");
+    console.log(extraPostLink);
     actions.source.fetch(extraPostLink);
   }, []);
 
