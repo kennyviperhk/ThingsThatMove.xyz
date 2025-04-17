@@ -29,7 +29,8 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          api: "https://blog.thingsthatmove.xyz/wp-json",
+          api: "https://blog.thingsthatmove.xyz/wp-json", // Direct WP endpoint
+          url: "https://www.thingsthatmove.xyz", // Public-facing URL
           params: {
             per_page: 50,
             type: ["post", "page","landings"]
