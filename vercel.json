@@ -11,7 +11,19 @@
   "rewrites": [
     {
       "source": "/static/(.*)",
-      "destination": "/static/$1"
+      "destination": "/build/static/$1"
+    },
+    {
+      "source": "/client/(.*)",
+      "destination": "/build/client/$1"
+    },
+    {
+      "source": "/bundling/(.*)",
+      "destination": "/build/bundling/$1"
+    },
+    {
+      "source": "/(.*).js",
+      "destination": "/build/$1.js"
     },
     {
       "source": "/wp-content/uploads/(.*)",
