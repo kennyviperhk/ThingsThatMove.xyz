@@ -39,9 +39,5 @@
     "swiper": "^11.0.5",
     "three": "^0.138.0",
     "uuid": "^11.1.0"
-  },
-  "devDependencies": {
-    "@types/debounce": "^1.2.4",
-    "@types/react": "^19.1.2"
   }
 }

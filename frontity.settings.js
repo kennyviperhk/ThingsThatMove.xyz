@@ -68,4 +68,4 @@ const settings = {
     "@frontity/html2react"
   ]
 };
-module.exports = settings;
+export default settings;

@@ -79,9 +79,9 @@ const Theme = ({ state, libraries }) => {
       </SkipLink>
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
-         <Header />
-       {/*   Add the header of the site. 
-          <TriangleLanding />*/}
+          <Header />
+        {/* Add the header of the site. */}
+          <TriangleLanding />
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
@@ -91,13 +91,13 @@ const Theme = ({ state, libraries }) => {
             <Home when={data.isHome} />
             <Archive when={data.isArchive} />
             <Post when={data.isPostType} />
-
+            {/*  <PageError when={data.isError} />*/}
           </Switch>
         </Main>
       </div>
       {inject()}
-    {/*    <Footer />
-      <FontFaces />*/}
+      <Footer />
+      <FontFaces />
     </>
   );
 };
