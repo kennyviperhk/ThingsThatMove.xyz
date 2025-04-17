@@ -10,9 +10,11 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
+    "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build",
-    "serve": "frontity serve"
+    "serve": "node build/server.js",
+    "vercel-build": "NODE_OPTIONS=--openssl-legacy-provider frontity build"
   },
   "prettier": {},
   "dependencies": {

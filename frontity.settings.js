@@ -14,8 +14,7 @@ const settings = {
       "/landings/bio/",
       "/landings/interactive-digital/",
       "/landings/tech-research/",
-      "/landings/kinetics-robotics/",
-	  "/landings/footer/"
+      "/landings/kinetics-robotics/"
     ]
   },
   "bundle": {
@@ -29,8 +28,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          api: "https://blog.thingsthatmove.xyz/wp-json", // Direct WP endpoint
-          url: "https://www.thingsthatmove.xyz", // Public-facing URL
+          api: "https://blog.thingsthatmove.xyz/wp-json",
           params: {
             per_page: 50,
             type: ["post", "page","landings"]
