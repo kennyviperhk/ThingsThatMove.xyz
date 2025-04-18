@@ -4,22 +4,25 @@
   "trailingSlash": false,
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/static/(.*)",
-      "destination": "/static/$1"
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     },
     {
-      "source": "/wp-content/uploads/(.*)",
-      "destination": "https://blog.thingsthatmove.xyz/wp-content/uploads/$1"
+      "src": "/wp-content/uploads/(.*)",
+      "dest": "https://blog.thingsthatmove.xyz/wp-content/uploads/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/server.js"
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ],
   "headers": [
