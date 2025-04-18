@@ -5,17 +5,17 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build",
-        "buildCommand": "npm run vercel-build"
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/build/static/$1"
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/fonts/$1"
     },
     {
       "src": "/wp-content/uploads/(.*)",
@@ -23,7 +23,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/build/server.js"
+      "dest": "/server.js"
     }
   ],
   "headers": [
@@ -63,15 +63,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=604800"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
         }
       ]
     }
