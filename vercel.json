@@ -4,11 +4,8 @@
   "trailingSlash": false,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "nodeVersion": "18.x"
-      }
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "rewrites": [
@@ -23,21 +20,6 @@
     {
       "source": "/(.*)",
       "destination": "/server.js"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/wp-content/uploads/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800"
-        }
-      ]
     }
   ],
   "env": {
