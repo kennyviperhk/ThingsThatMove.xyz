@@ -8,7 +8,7 @@ const settings = {
     }
   },
   source: {
-    url: "https://thingsthatmove.xyz", // keep this pointing to your WP site
+    url: "https://blog.thingsthatmove.xyz", // Updated to match WordPress site
     preFetch: [
       "/landings/home/",
       "/landings/bio/",
@@ -18,7 +18,8 @@ const settings = {
     ]
   },
   "bundle": {
-    "splitting": true, 
+    "splitting": true,
+    "publicPath": "/static/"
   },
   "packages": [
     {
