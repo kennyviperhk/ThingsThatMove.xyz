@@ -7,15 +7,15 @@
     "frontity"
   ],
   "engines": {
-    "node": "16.x",
+    "node": "18.x",
     "npm": ">=6.0.0"
   },
   "scripts": {
     "start": "frontity serve --port $PORT",
     "dev": "frontity dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build",
+    "build": "frontity build",
     "serve": "node build/server.js",
-    "vercel-build": "NODE_OPTIONS=--openssl-legacy-provider frontity build"
+    "vercel-build": "frontity build"
   },
   "prettier": {},
   "dependencies": {
